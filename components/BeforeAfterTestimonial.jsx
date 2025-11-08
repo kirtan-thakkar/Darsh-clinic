@@ -49,7 +49,7 @@ export default function BeforeAfterTestimonial() {
             staggerDelay={0.1}
           />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Witness the incredible transformations achieved by Dr. Dheeraj Naik's expert dental care.
+            Witness the incredible transformations achieved by Dr. Dheeraj Naik&apos;s expert dental care.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export default function BeforeAfterTestimonial() {
         <div className="text-center mt-16 space-y-6">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Transform Your Smile with Dr. Dheeraj Naik's Expertise
+              Transform Your Smile with Dr. Dheeraj Naik&apos;s Expertise
             </h3>
             <p className="text-lg text-gray-600 mb-2">
               ✨ 15+ Years of Excellence in Dental Care

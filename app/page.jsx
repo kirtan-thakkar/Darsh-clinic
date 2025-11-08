@@ -123,26 +123,26 @@ export default function Home() {
       question:
         "Do you accept insurance and what payment methods are available?",
       answer:
-        "We accept various payment methods including cash, credit/debit cards, and UPI payments for your convenience. While we don't directly process insurance, we can provide detailed receipts and treatment documentation that you can submit to your insurance provider for reimbursement.",
+        "We accept various payment methods including cash, credit/debit cards, and UPI payments for your convenience. While we don&apos;t directly process insurance, we can provide detailed receipts and treatment documentation that you can submit to your insurance provider for reimbursement.",
     },
     {
       id: "emergency-services",
       question: "Do you provide emergency dental services?",
       answer:
-        "Yes, we provide 24/7 emergency dental services for urgent situations like severe tooth pain, dental trauma, or broken teeth. Call us immediately at +91 99254 65919 for emergency situations. We understand dental emergencies can't wait and we're here to help anytime.",
+        "Yes, we provide 24/7 emergency dental services for urgent situations like severe tooth pain, dental trauma, or broken teeth. Call us immediately at +91 99254 65919 for emergency situations. We understand dental emergencies can&apos;t wait and we&apos;re here to help anytime.",
     },
     {
       id: "treatment-duration",
       question: "How long do different treatments take?",
       answer:
-        "Treatment duration varies based on complexity. Routine cleanings take 30-45 minutes, fillings 30-60 minutes, root canals 1-2 hours, and implants may require multiple visits over 3-6 months. During your consultation, we'll provide a detailed timeline specific to your treatment plan.",
+        "Treatment duration varies based on complexity. Routine cleanings take 30-45 minutes, fillings 30-60 minutes, root canals 1-2 hours, and implants may require multiple visits over 3-6 months. During your consultation, we&apos;ll provide a detailed timeline specific to your treatment plan.",
     },
     {
       id: "aftercare-instructions",
       question:
         "What should I expect after treatment and how do I care for my teeth?",
       answer:
-        "Post-treatment care varies by procedure. We provide detailed aftercare instructions including dietary restrictions, oral hygiene guidelines, and follow-up schedules. Generally, maintain good oral hygiene, avoid hard foods initially, and attend all follow-up appointments. We're always available for post-treatment questions or concerns.",
+        "Post-treatment care varies by procedure. We provide detailed aftercare instructions including dietary restrictions, oral hygiene guidelines, and follow-up schedules. Generally, maintain good oral hygiene, avoid hard foods initially, and attend all follow-up appointments. We&apos;re always available for post-treatment questions or concerns.",
     },
     {
       id: "technology-safety",
@@ -344,7 +344,7 @@ export default function Home() {
         <StaggeredFAQSection
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about our dental services and treatments"
-          supportText="Can't find what you're looking for? Contact our"
+          supportText="Can&apos;t find what you&apos;re looking for? Contact our"
           supportLink="tel:+919925465919"
           supportLinkText="dental care team"
           faqItems={faqItems}

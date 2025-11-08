@@ -12,7 +12,7 @@ import { cn } from "../../lib/utils";
 export default function StaggeredFAQSection({
   title = "StaggeredFAQ",
   subtitle = "Everything you need to know about Ruixen UI",
-  supportText = "Can't find what you're looking for? Reach out to our",
+  supportText = "Can&apos;t find what you&apos;re looking for? Reach out to our",
   supportLink = "#",
   supportLinkText = "Ruixen UI support team",
   faqItems,

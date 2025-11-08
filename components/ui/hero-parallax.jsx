@@ -150,14 +150,14 @@ export const ProductCard = ({
       {/* 7. Movement - Hover animations guide attention */}
       {/* 9. Unity - Consistent card styling */}
       
-      <a href={product.link} className="block group-hover/product:shadow-2xl transition-shadow duration-300">
+      <Link href={product.link} className="block group-hover/product:shadow-2xl transition-shadow duration-300">
         <img
           src={product.thumbnail}
           height="600"
           width="600"
           className="object-cover object-center absolute h-full w-full inset-0 transition-transform duration-300 group-hover/product:scale-105"
           alt={product.title} />
-      </a>
+      </Link>
       
       {/* Blue medical overlay instead of black */}
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-70 bg-gradient-to-t from-blue-900 via-blue-600/50 to-transparent pointer-events-none transition-opacity duration-300"></div>

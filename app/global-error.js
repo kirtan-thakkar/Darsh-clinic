@@ -23,7 +23,7 @@ export default function GlobalError({ error, reset }) {
                         </h1>
                         
                         <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                            We're experiencing some technical difficulties. Our team has been notified and is working to fix this issue.
+                            We&apos;re experiencing some technical difficulties. Our team has been notified and is working to fix this issue.
                         </p>
 
                         {/* Error Details (only in development) */}
@@ -36,7 +36,7 @@ export default function GlobalError({ error, reset }) {
 
                         {/* Medical themed message */}
                         <div className="flex items-center justify-center gap-2 text-black mb-8 font-semibold">
-                            <span>Dr. Dheeraj Naik's Dental Care - We'll Get This Fixed!</span>
+                            <span>Dr. Dheeraj Naik&apos;s Dental Care - We&apos;ll Get This Fixed!</span>
                         </div>
 
                         {/* Action Buttons */}

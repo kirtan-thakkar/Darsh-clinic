@@ -55,13 +55,13 @@ function MessageDisplay() {
         </div>
         
         <div className="text-lg md:text-xl text-gray-700 max-w-md text-center mb-4 leading-relaxed">
-          The page you're looking for seems to have taken a sick day. Let's get you back to healthy browsing!
+          The page you&apos;re looking for seems to have taken a sick day. Let&apos;s get you back to healthy browsing!
         </div>
 
         {/* Dental themed message */}
         <div className="flex items-center gap-2 text-black mb-8 font-semibold">
           <Heart className="w-5 h-5 text-red-500" />
-          <span>Dr. Dheeraj Naik's Dental Care - Always Here for Your Smile</span>
+          <span>Dr. Dheeraj Naik&apos;s Dental Care - Always Here for Your Smile</span>
         </div>
 
         {/* Action Button */}
