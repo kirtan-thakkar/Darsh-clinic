@@ -30,64 +30,79 @@ export default function Home() {
   const heroProducts = [
     {
       title: "Digital Smile Design",
-      link: "#services",
+      link: "/services",
       thumbnail: "/jonathan-borba-W9YEY6G8LVM-unsplash.jpg",
     },
     {
       title: "Invisalign Clear Aligners",
-      link: "#services",
+      link: "/services",
       thumbnail: "/atikah-akhtar-XJptUS8nbhs-unsplash.jpg",
     },
     {
       title: "Teeth Whitening",
-      link: "#services",
+      link: "/services",
       thumbnail: "/amr-taha-uvnMQXF56kQ-unsplash.jpg",
     },
     {
       title: "Dental Implants",
-      link: "#services",
+      link: "/services",
       thumbnail: "/ozkan-guner-GxctDhxhbxM-unsplash.jpg",
     },
     {
       title: "Root Canal Therapy",
-      link: "#services",
+      link: "/services",
       thumbnail: "/dental-clinic-interior.jpg",
     },
     {
       title: "Periodontal Care",
-      link: "#services",
+      link: "/services",
       thumbnail: "/dental-equipment.jpg",
     },
     {
       title: "Cosmetic Dentistry",
-      link: "#services",
+      link: "/services",
       thumbnail: "/cosmetic-dentistry.jpg",
     },
     {
       title: "Oral Surgery",
-      link: "#services",
+      link: "/services",
       thumbnail: "/hero1.jpg",
     },
     {
       title: "Pediatric Dentistry",
-      link: "#services",
-      thumbnail: "hero4.jpg",
+      link: "/services",
+      thumbnail: "/pediatric-dentistry.jpg",
     },
     {
       title: "Emergency Care",
-      link: "#services",
+      link: "/services",
       thumbnail: "/hero2.jpg",
     },
     {
       title: "Preventive Care",
-      link: "#services",
+      link: "/services",
       thumbnail: "/hero3.jpg",
     },
     {
-      title: "Restorative Dentistry",
-      link: "#services",
+      title: "Advanced Dental Care",
+      link: "/services",
+      thumbnail: "/hero4.jpg",
+    },
+    {
+      title: "Comfort & Care",
+      link: "/services",
       thumbnail: "/waiting-room.jpg",
     },
+    {
+      title: "Modern Dentistry",
+      link: "/services",
+      thumbnail: "/dental-treatment-room.jpg",
+    },
+    {
+      title: "Expert Treatment",
+      link: "/services",
+      thumbnail: "/ozkan-guner-NUPZa4bbi_0-unsplash.jpg",
+    }
   ];
 
   const faqItems = [
