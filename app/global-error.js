@@ -1,6 +1,7 @@
 "use client";
 
 import Navigation from "../components/Navigation";
+import Link from "next/link";
 import { AlertTriangle, RefreshCw, Home, Phone } from "lucide-react";
 
 export default function GlobalError({ error, reset }) {
@@ -49,13 +50,13 @@ export default function GlobalError({ error, reset }) {
                                 Try Again
                             </button>
                             
-                            <a
+                            <Link
                                 href="/"
                                 className="group flex items-center justify-center gap-3 px-8 py-4 border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-105"
                             >
                                 <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 Go Home
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Contact Info */}
