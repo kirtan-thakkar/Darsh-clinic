@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { ReactLenis } from "lenis/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import WhatsAppButton from "../../../components/WhatsAppButton";
@@ -12,33 +14,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  MapPin,
-  Phone,
   Clock,
-  Mail,
   Calendar,
+  AlertCircle,
   CheckCircle,
   Award,
   Users,
-  Shield,
   Heart,
-  Star,
   Stethoscope,
   GraduationCap,
   Building,
   Activity,
-  Target,
-  TrendingUp,
-  ArrowRight,
-  ExternalLink,
   ArrowLeft,
-  BookOpen,
   Trophy,
-  Briefcase,
   Clock3,
-  MapPinIcon,
   PhoneCall,
   MessageCircle,
+  User,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -155,7 +147,7 @@ const DoctorPage = ({ params }) => {
       specialization: "General & Cosmetic Dentistry",
       experience: "15+ Years",
       qualifications: "BDS, MDS",
-      avatar: "/jonathan-borba-W9YEY6G8LVM-unsplash.jpg",
+      avatar: "/doctors/dheeraj.jpg",
       isFounder: true,
       expertise: ["General Dentistry", "Cosmetic Dentistry", "Root Canal", "Dental Implants"],
       description: "Visionary leader with 15+ years of excellence in dental care, transforming smiles across Vadodara.",
@@ -199,204 +191,156 @@ const DoctorPage = ({ params }) => {
       ]
     },
     {
-      id: "dr-priya-sharma-002",
-      name: "Dr. Priya Sharma",
-      role: "Senior Orthodontist",
-      specialization: "Orthodontics & Aligners",
+      id: "dr-priti-bhat-002",
+      name: "Dr. Priti Bhat",
+      role: "Senior Dental Surgeon",
+      specialization: "General & Advanced Dentistry",
       experience: "12+ Years",
-      qualifications: "BDS, MDS (Orthodontics)",
-      avatar: "/atikah-akhtar-XJptUS8nbhs-unsplash.jpg",
+      qualifications: "BDS, MDS",
+      avatar: "/doctors/priti.png",
       isFounder: false,
-      expertise: ["Braces", "Invisalign", "Jaw Alignment", "Pediatric Orthodontics"],
-      description: "Expert in creating perfect smiles through advanced orthodontic treatments and modern aligner technology.",
-      fullBio: "Dr. Priya Sharma brings over 12 years of specialized expertise in orthodontics to Darsh Dental Clinic. She is passionate about transforming smiles and improving oral health through precise tooth movement and jaw alignment. Dr. Sharma is certified in the latest orthodontic technologies, including Invisalign clear aligners, traditional braces, and advanced digital treatment planning. Her gentle approach and attention to detail have made her a favorite among both adult and pediatric patients. She believes in creating beautiful, functional smiles while ensuring patient comfort throughout the treatment journey.",
+      expertise: ["General Dentistry", "Oral Surgery", "Restorative Procedures", "Preventive Care"],
+      description: "Dedicated senior dental surgeon with extensive experience in comprehensive oral health care and advanced dental procedures.",
+      fullBio: "Dr. Priti Bhat is a highly experienced senior dental surgeon who brings over 12 years of dedicated service to Darsh Dental Clinic. With her comprehensive approach to oral health care, she specializes in both routine and complex dental procedures, ensuring that each patient receives personalized attention and the highest quality treatment. Dr. Bhat is committed to staying current with the latest advancements in dental technology and techniques, making her a valuable asset to our team and a trusted care provider for our patients.",
       education: [
-        { degree: "Bachelor of Dental Surgery (BDS)", institution: "MS University Vadodara", year: "2011" },
-        { degree: "Master of Dental Surgery (MDS) - Orthodontics", institution: "Government Dental College Mumbai", year: "2014" },
-        { degree: "Invisalign Certification", institution: "Align Technology", year: "2016" },
-        { degree: "Digital Orthodontics Fellowship", institution: "3Shape Academy", year: "2019" }
+        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Government Dental College", year: "2011" },
+        { degree: "Master of Dental Surgery (MDS)", institution: "Dental Institute", year: "2014" },
+        { degree: "Advanced Restorative Dentistry", institution: "Continuing Education Institute", year: "2018" }
       ],
       achievements: [
-        { title: "Best Orthodontist Award", organization: "Gujarat Orthodontic Society", year: "2020" },
-        { title: "Invisalign Provider of the Year", organization: "Align Technology India", year: "2021" },
-        { title: "Excellence in Patient Care", organization: "Indian Orthodontic Society", year: "2022" }
+        { title: "Excellence in Patient Care", organization: "Vadodara Dental Society", year: "2021" },
+        { title: "Outstanding Dental Service Award", organization: "Gujarat Dental Association", year: "2020" }
       ],
       publications: [
-        { title: "Clear Aligner Therapy in Adult Patients", journal: "Journal of Indian Orthodontic Society", year: "2021" },
-        { title: "Digital Treatment Planning in Modern Orthodontics", journal: "Orthodontic Review", year: "2022" }
+        { title: "Modern Approaches in General Dentistry", journal: "Indian Dental Review", year: "2021" }
       ],
       specialProcedures: [
-        "Invisalign Treatment",
-        "Traditional Metal & Ceramic Braces", 
-        "Lingual Braces",
-        "Early Interceptive Treatment",
-        "Surgical Orthodontics",
-        "Retention Therapy"
+        "Comprehensive Oral Examinations",
+        "Advanced Restorative Procedures",
+        "Oral Surgery",
+        "Preventive Dental Care",
+        "Emergency Dental Treatment"
       ],
-      personalInterests: ["Yoga", "Classical Music", "Reading", "Digital Photography"],
+      personalInterests: ["Reading", "Traveling", "Community Health"],
       consultationHours: [
-        { day: "Monday, Wednesday, Friday", time: "10:00 AM - 6:00 PM" },
-        { day: "Tuesday, Thursday", time: "2:00 PM - 8:00 PM" },
-        { day: "Saturday", time: "9:00 AM - 1:00 PM" }
+        { day: "Monday to Friday", time: "9:00 AM - 6:00 PM" },
+        { day: "Saturday", time: "9:00 AM - 2:00 PM" }
       ],
-      languages: ["English", "Hindi", "Gujarati", "Marathi"],
+      languages: ["English", "Hindi", "Gujarati"],
       membershipAffiliations: [
-        "Indian Orthodontic Society",
-        "Gujarat Orthodontic Society", 
-        "World Federation of Orthodontists",
-        "Invisalign Provider Network"
+        "Indian Dental Association",
+        "Gujarat Dental Society"
       ]
     },
     {
-      id: "dr-rajesh-patel-003",
-      name: "Dr. Rajesh Patel",
-      role: "Oral & Maxillofacial Surgeon",
-      specialization: "Oral Surgery & Implants",
-      experience: "10+ Years",
-      qualifications: "BDS, MDS (Oral Surgery)",
-      avatar: "/ozkan-guner-GxctDhxhbxM-unsplash.jpg",
+      id: "dr-janhvi-oza-003",
+      name: "Dr. Janhvi Oza",
+      role: "Dental Surgeon",
+      specialization: "General Dentistry",
+      experience: "8+ Years",
+      qualifications: "BDS",
+      avatar: "/doctors/jhanvi.jpg",
       isFounder: false,
-      expertise: ["Dental Implants", "Wisdom Tooth Extraction", "Jaw Surgery", "Bone Grafting"],
-      description: "Specialized in complex oral surgeries and advanced implant procedures with precision and care.",
-      fullBio: "Dr. Rajesh Patel is a highly skilled oral and maxillofacial surgeon with over 10 years of experience in complex dental procedures. He specializes in dental implant placement, surgical extractions, bone grafting, and corrective jaw surgery. Dr. Patel's expertise lies in utilizing advanced surgical techniques and cutting-edge technology to achieve optimal patient outcomes. His meticulous approach to treatment planning and gentle surgical technique has earned him recognition among both patients and peers. He is committed to staying current with the latest advances in oral surgery and implantology.",
+      expertise: ["General Dentistry", "Oral Health", "Patient Care", "Dental Treatments"],
+      description: "Compassionate dental surgeon committed to providing quality dental care with a focus on patient comfort and oral health excellence.",
+      fullBio: "Dr. Janhvi Oza is a dedicated dental surgeon with 8+ years of experience in providing comprehensive dental care. She is committed to maintaining the highest standards of oral health care while ensuring patient comfort and satisfaction. Dr. Oza believes in preventive dentistry and patient education, helping her patients maintain optimal oral health through regular care and proper dental hygiene practices.",
       education: [
-        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Dharamsinh Desai University", year: "2013" },
-        { degree: "Master of Dental Surgery (MDS) - Oral Surgery", institution: "Government Dental College Ahmedabad", year: "2016" },
-        { degree: "Advanced Implantology Course", institution: "Straumann Institute", year: "2018" },
-        { degree: "Bone Grafting Techniques", institution: "ITI International", year: "2020" }
+        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Dental College", year: "2015" },
+        { degree: "Continuing Education in General Dentistry", institution: "Professional Development Institute", year: "2018" }
       ],
       achievements: [
-        { title: "Young Surgeon Award", organization: "Association of Oral Surgeons of India", year: "2019" },
-        { title: "Excellence in Implantology", organization: "Indian Society of Oral Implantologists", year: "2021" },
-        { title: "Best Paper Presentation", organization: "Gujarat Dental Conference", year: "2020" }
+        { title: "Patient Care Excellence", organization: "Vadodara Dental Society", year: "2022" }
       ],
-      publications: [
-        { title: "Immediate Implant Placement: A Clinical Study", journal: "Journal of Oral Implantology", year: "2020" },
-        { title: "Bone Augmentation Techniques in Implant Dentistry", journal: "Indian Journal of Oral Surgery", year: "2021" }
-      ],
+      publications: [],
       specialProcedures: [
-        "Single & Multiple Implant Placement",
-        "All-on-4 & All-on-6 Procedures",
-        "Sinus Lift Surgery",
-        "Bone Grafting & Ridge Augmentation",
-        "Surgical Tooth Extractions",
-        "TMJ Disorder Treatment"
+        "General Dental Examinations",
+        "Preventive Care",
+        "Basic Restorative Procedures",
+        "Oral Health Education"
       ],
-      personalInterests: ["Cricket", "Traveling", "Cooking", "Medical Research"],
+      personalInterests: ["Reading", "Music", "Community Service"],
       consultationHours: [
-        { day: "Monday, Wednesday, Friday", time: "9:00 AM - 5:00 PM" },
-        { day: "Tuesday, Thursday", time: "2:00 PM - 7:00 PM" },
+        { day: "Monday to Friday", time: "10:00 AM - 6:00 PM" },
+        { day: "Saturday", time: "9:00 AM - 1:00 PM" }
+      ],
+      languages: ["English", "Hindi", "Gujarati"],
+      membershipAffiliations: [
+        "Indian Dental Association",
+        "Gujarat Dental Society"
+      ]
+    },
+    {
+      id: "dr-hetal-patel-004",
+      name: "Dr. Hetal Patel",
+      role: "Dental Surgeon",
+      specialization: "General Dentistry",
+      experience: "7+ Years",
+      qualifications: "BDS",
+      avatar: "/doctors/hetal.png",
+      isFounder: false,
+      expertise: ["General Dentistry", "Preventive Care", "Oral Health Education", "Restorative Treatments"],
+      description: "Skilled dental surgeon dedicated to maintaining optimal oral health through comprehensive care and patient education.",
+      fullBio: "Dr. Hetal Patel is a skilled dental surgeon with 7+ years of experience in providing comprehensive dental care. She is passionate about preventive dentistry and believes in educating her patients about maintaining optimal oral health. Dr. Patel is known for her gentle approach and attention to detail, making her a trusted choice for patients seeking quality dental care.",
+      education: [
+        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Dental College", year: "2016" },
+        { degree: "Continuing Education in Restorative Dentistry", institution: "Professional Development Center", year: "2019" }
+      ],
+      achievements: [
+        { title: "Excellence in Patient Care", organization: "Gujarat Dental Association", year: "2022" }
+      ],
+      publications: [],
+      specialProcedures: [
+        "Comprehensive Dental Care",
+        "Preventive Treatments",
+        "Restorative Procedures",
+        "Oral Health Counseling"
+      ],
+      personalInterests: ["Healthcare Education", "Community Service", "Reading"],
+      consultationHours: [
+        { day: "Monday to Friday", time: "9:00 AM - 5:00 PM" },
+        { day: "Saturday", time: "9:00 AM - 1:00 PM" }
+      ],
+      languages: ["English", "Hindi", "Gujarati"],
+      membershipAffiliations: [
+        "Indian Dental Association",
+        "Gujarat Dental Society"
+      ]
+    },
+    {
+      id: "dr-namrata-awariya-005",
+      name: "Dr. Namrata Awariya",
+      role: "BDS Surgeon",
+      specialization: "General Dentistry",
+      experience: "6+ Years",
+      qualifications: "BDS",
+      avatar: "/doctors/namrata.png",
+      isFounder: false,
+      expertise: ["General Dentistry", "Oral Care", "Patient Treatment", "Dental Health"],
+      description: "Professional dental surgeon focused on delivering personalized dental care with attention to detail and patient satisfaction.",
+      fullBio: "Dr. Namrata Awariya is a professional dental surgeon with 6+ years of experience in general dentistry. She is dedicated to providing personalized dental care that meets each patient's unique needs. Dr. Awariya focuses on creating a comfortable environment for her patients while delivering high-quality dental treatments with precision and care.",
+      education: [
+        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Dental Institute", year: "2017" },
+        { degree: "Advanced General Dentistry Course", institution: "Continuing Education Center", year: "2020" }
+      ],
+      achievements: [
+        { title: "Young Dentist Achievement Award", organization: "Vadodara Dental Society", year: "2023" }
+      ],
+      publications: [],
+      specialProcedures: [
+        "General Dental Examinations",
+        "Basic Restorative Care",
+        "Preventive Treatments",
+        "Patient Consultation"
+      ],
+      personalInterests: ["Medical Literature", "Patient Care", "Professional Development"],
+      consultationHours: [
+        { day: "Monday to Friday", time: "10:00 AM - 6:00 PM" },
         { day: "Saturday", time: "10:00 AM - 2:00 PM" }
       ],
       languages: ["English", "Hindi", "Gujarati"],
       membershipAffiliations: [
-        "Association of Oral and Maxillofacial Surgeons of India",
-        "Indian Society of Oral Implantologists",
-        "International Team for Implantology (ITI)",
-        "Gujarat State Dental Council"
+        "Indian Dental Association"
       ]
-    },
-    // Adding remaining team members with basic info for now
-    {
-      id: "dr-anjali-mehta-004",
-      name: "Dr. Anjali Mehta",
-      role: "Pediatric Dentist",
-      specialization: "Children's Dental Care",
-      experience: "8+ Years",
-      qualifications: "BDS, MDS (Pedodontics)",
-      avatar: "/amr-taha-uvnMQXF56kQ-unsplash.jpg",
-      isFounder: false,
-      expertise: ["Child Dentistry", "Preventive Care", "Sedation Dentistry", "Special Needs"],
-      description: "Dedicated to creating positive dental experiences for children with gentle, compassionate care.",
-      fullBio: "Dr. Anjali Mehta is a compassionate pediatric dentist with 8+ years of experience in providing specialized dental care for infants, children, and adolescents.",
-      education: [
-        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Government Dental College Vadodara", year: "2015" },
-        { degree: "Master of Dental Surgery (MDS) - Pedodontics", institution: "Nair Hospital Dental College Mumbai", year: "2018" }
-      ],
-      achievements: [
-        { title: "Best Pediatric Dentist", organization: "Vadodara Pediatric Society", year: "2021" }
-      ],
-      specialProcedures: ["Preventive Dentistry for Children", "Pulp Therapy", "Space Maintainers"],
-      consultationHours: [
-        { day: "Monday to Friday", time: "10:00 AM - 6:00 PM" },
-        { day: "Saturday", time: "9:00 AM - 2:00 PM" }
-      ],
-      languages: ["English", "Hindi", "Gujarati"]
-    },
-    {
-      id: "dr-vikram-singh-005",
-      name: "Dr. Vikram Singh",
-      role: "Periodontist",
-      specialization: "Gum Diseases & Treatment",
-      experience: "9+ Years",
-      qualifications: "BDS, MDS (Periodontics)",
-      avatar: "/ozkan-guner-NUPZa4bbi_0-unsplash.jpg",
-      isFounder: false,
-      expertise: ["Gum Treatment", "Periodontal Surgery", "Laser Therapy", "Implant Maintenance"],
-      description: "Expert in treating gum diseases and maintaining periodontal health using advanced techniques.",
-      fullBio: "Dr. Vikram Singh is a dedicated periodontist with 9+ years of expertise in diagnosing and treating gum diseases.",
-      education: [
-        { degree: "Bachelor of Dental Surgery (BDS)", institution: "King George Medical University", year: "2014" },
-        { degree: "Master of Dental Surgery (MDS) - Periodontics", institution: "Maulana Azad Institute Delhi", year: "2017" }
-      ],
-      achievements: [
-        { title: "Young Periodontist Award", organization: "Indian Society of Periodontology", year: "2020" }
-      ],
-      specialProcedures: ["Scaling & Root Planing", "Periodontal Surgery", "Laser Therapy"],
-      consultationHours: [
-        { day: "Tuesday, Thursday, Saturday", time: "9:00 AM - 5:00 PM" }
-      ],
-      languages: ["English", "Hindi", "Punjabi"]
-    },
-    {
-      id: "dr-kavita-joshi-006",
-      name: "Dr. Kavita Joshi",
-      role: "Endodontist",
-      specialization: "Root Canal Specialist",
-      experience: "11+ Years",
-      qualifications: "BDS, MDS (Endodontics)",
-      avatar: "/dental-treatment-room.jpg",
-      isFounder: false,
-      expertise: ["Root Canal", "Endodontic Surgery", "Trauma Management", "Pain Management"],
-      description: "Specialized in saving natural teeth through advanced endodontic treatments and pain-free procedures.",
-      fullBio: "Dr. Kavita Joshi is a highly skilled endodontist with 11+ years of experience in saving natural teeth through advanced root canal treatments.",
-      education: [
-        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Government Dental College Nagpur", year: "2012" },
-        { degree: "Master of Dental Surgery (MDS) - Endodontics", institution: "Manipal College of Dental Sciences", year: "2015" }
-      ],
-      achievements: [
-        { title: "Excellence in Endodontics Award", organization: "Indian Association of Conservative Dentistry", year: "2020" }
-      ],
-      specialProcedures: ["Single Visit Root Canal", "Complex Retreatment", "Endodontic Surgery"],
-      consultationHours: [
-        { day: "Monday, Wednesday, Friday", time: "9:00 AM - 6:00 PM" }
-      ],
-      languages: ["English", "Hindi", "Gujarati", "Marathi"]
-    },
-    {
-      id: "dr-amit-gupta-007",
-      name: "Dr. Amit Gupta",
-      role: "Prosthodontist",
-      specialization: "Restorative Dentistry",
-      experience: "13+ Years",
-      qualifications: "BDS, MDS (Prosthodontics)",
-      avatar: "/dental-equipment.jpg",
-      isFounder: false,
-      expertise: ["Crowns & Bridges", "Dentures", "Veneers", "Full Mouth Reconstruction"],
-      description: "Expert in restoring and replacing teeth with precision-crafted prosthetic solutions.",
-      fullBio: "Dr. Amit Gupta is an accomplished prosthodontist with 13+ years of experience in restorative and prosthetic dentistry.",
-      education: [
-        { degree: "Bachelor of Dental Surgery (BDS)", institution: "Rajiv Gandhi University", year: "2010" },
-        { degree: "Master of Dental Surgery (MDS) - Prosthodontics", institution: "Government Dental College Bangalore", year: "2013" }
-      ],
-      achievements: [
-        { title: "Excellence in Prosthodontics", organization: "Indian Prosthodontic Society", year: "2019" }
-      ],
-      specialProcedures: ["All-Ceramic Crowns", "Porcelain Veneers", "Complete Dentures"],
-      consultationHours: [
-        { day: "Monday to Friday", time: "9:00 AM - 6:00 PM" }
-      ],
-      languages: ["English", "Hindi", "Gujarati", "Kannada"]
     }
   ];
 
@@ -454,12 +398,18 @@ const DoctorPage = ({ params }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <ReactLenis root>
+        <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <motion.div 
+            className="rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          ></motion.div>
           <p className="text-gray-600">Loading doctor profile...</p>
         </div>
-      </div>
+        </div>
+      </ReactLenis>
     );
   }
 
@@ -469,7 +419,8 @@ const DoctorPage = ({ params }) => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <ReactLenis root>
+      <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Back Navigation */}
@@ -489,20 +440,30 @@ const DoctorPage = ({ params }) => {
       <section className="relative py-20 bg-gradient-to-br from-blue-50 to-purple-50 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-xl animate-pulse"></div>
-          <div
-            className="absolute top-40 right-32 w-24 h-24 bg-purple-100/40 rounded-full blur-lg animate-bounce"
-            style={{ animationDelay: "2s", animationDuration: "3s" }}
-          ></div>
-          <div className="absolute top-28 left-1/4 text-blue-200/40 animate-pulse">
+          <motion.div 
+            className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-xl"
+            animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.05, 1] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          ></motion.div>
+          <motion.div
+            className="absolute top-40 right-32 w-24 h-24 bg-purple-100/40 rounded-full blur-lg"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          ></motion.div>
+          <motion.div 
+            className="absolute top-28 left-1/4 text-blue-200/40"
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
             <Stethoscope className="w-8 h-8" />
-          </div>
-          <div
-            className="absolute bottom-40 right-1/3 text-purple-200/40 animate-pulse"
-            style={{ animationDelay: "4s" }}
+          </motion.div>
+          <motion.div
+            className="absolute bottom-40 right-1/3 text-purple-200/40"
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 4 }}
           >
             <Heart className="w-7 h-7" />
-          </div>
+          </motion.div>
         </div>
 
         {/* Wave Divider at Bottom */}
@@ -581,22 +542,18 @@ const DoctorPage = ({ params }) => {
                 </div>
               </div>
 
-              {/* Quick Actions */}
-              <div className="flex flex-wrap gap-4">
+              {/* Clinic Information */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200/50">
+                <p className="text-gray-700 text-sm mb-3">
+                  Part of our expert team at Darsh Dental Clinic, providing comprehensive dental care across Vadodara.
+                </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold w-full justify-center"
                 >
-                  <Calendar className="w-5 h-5" />
-                  Book Appointment
+                  <Building className="w-5 h-5" />
+                  Visit Our Clinic
                 </Link>
-                <a
-                  href="tel:+919428305428"
-                  className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold"
-                >
-                  <PhoneCall className="w-5 h-5" />
-                  Call Now
-                </a>
               </div>
             </div>
           </div>
@@ -622,55 +579,76 @@ const DoctorPage = ({ params }) => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Profile */}
             <div className="lg:col-span-2 space-y-12">
-              {/* About Section */}
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">About {doctor.name}</h2>
-                <div className="prose prose-lg text-gray-700">
-                  <p className="leading-relaxed">{doctor.fullBio}</p>
+              {/* About the Doctor */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  About {doctor.name}
+                  <motion.div
+                    animate={{ rotate: [0, 15, -15, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center"
+                  >
+                    <User className="w-4 h-4 text-white" />
+                  </motion.div>
+                </h2>
+                <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300">
+                  <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                    {doctor.description}
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <motion.div 
+                      className="text-center p-4 bg-white rounded-lg shadow-sm border border-blue-100"
+                      whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(59, 130, 246, 0.15)" }}
+                    >
+                      <GraduationCap className="w-6 h-6 text-blue-600 mx-auto mb-2" />
+                      <h4 className="font-semibold text-gray-900 mb-1">Qualifications</h4>
+                      <p className="text-gray-600 text-sm">{doctor.qualifications}</p>
+                    </motion.div>
+                    <motion.div 
+                      className="text-center p-4 bg-white rounded-lg shadow-sm border border-purple-100"
+                      whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(147, 51, 234, 0.15)" }}
+                    >
+                      <Clock className="w-6 h-6 text-purple-600 mx-auto mb-2" />
+                      <h4 className="font-semibold text-gray-900 mb-1">Experience</h4>
+                      <p className="text-gray-600 text-sm">{doctor.experience}</p>
+                    </motion.div>
+                    <motion.div 
+                      className="text-center p-4 bg-white rounded-lg shadow-sm border border-green-100"
+                      whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(34, 197, 94, 0.15)" }}
+                    >
+                      <Stethoscope className="w-6 h-6 text-green-600 mx-auto mb-2" />
+                      <h4 className="font-semibold text-gray-900 mb-1">Specialization</h4>
+                      <p className="text-gray-600 text-sm">{doctor.specialization}</p>
+                    </motion.div>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Education */}
+              {/* Professional Background */}
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                   <GraduationCap className="w-6 h-6 text-blue-600" />
-                  Education & Certifications
+                  Professional Background
                 </h3>
-                <div className="space-y-4">
-                  {doctor.education?.map((edu, index) => (
-                    <div key={index} className="border-l-4 border-blue-500 pl-6 py-2">
-                      <h4 className="font-semibold text-gray-900">{edu.degree}</h4>
-                      <p className="text-gray-600">{edu.institution}</p>
-                      <p className="text-sm text-blue-600 font-medium">{edu.year}</p>
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-200">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Education</h4>
+                      <p className="text-gray-700">{doctor.qualifications}</p>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Achievements */}
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                  <Trophy className="w-6 h-6 text-yellow-600" />
-                  Awards & Achievements
-                </h3>
-                <div className="grid gap-6">
-                  {doctor.achievements?.map((achievement, index) => (
-                    <div
-                      key={index}
-                      className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200 shadow-md hover:shadow-lg transition-shadow duration-300"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                          <Award className="w-6 h-6 text-yellow-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">{achievement.title}</h4>
-                          <p className="text-gray-600 text-sm">{achievement.organization}</p>
-                          <p className="text-yellow-600 font-medium text-sm">{achievement.year}</p>
-                        </div>
-                      </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Experience</h4>
+                      <p className="text-gray-700">{doctor.experience} in {doctor.specialization}</p>
                     </div>
-                  ))}
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Role at Darsh Dental</h4>
+                      <p className="text-gray-700">{doctor.role}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -678,19 +656,34 @@ const DoctorPage = ({ params }) => {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Expertise */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover hover-glow group">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Stethoscope className="w-5 h-5 text-blue-600 icon-spin" />
+                  <motion.div
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Stethoscope className="w-5 h-5 text-blue-600" />
+                  </motion.div>
                   Areas of Expertise
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {doctor.expertise.map((skill, index) => (
-                    <span
+                    <motion.span
                       key={index}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+                      className="px-3 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium border border-blue-200 cursor-pointer"
+                      whileHover={{ 
+                        scale: 1.1, 
+                        backgroundColor: "#3B82F6", 
+                        color: "#FFFFFF",
+                        boxShadow: "0 4px 15px rgba(59, 130, 246, 0.3)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.3 }}
                     >
                       {skill}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -713,68 +706,139 @@ const DoctorPage = ({ params }) => {
                 </div>
               )}
 
-              {/* Consultation Hours */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover hover-glow group">
+              {/* Clinic Hours */}
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-green-600 icon-spin" />
-                  Consultation Hours
+                  <motion.div
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  >
+                    <Clock className="w-5 h-5 text-green-600" />
+                  </motion.div>
+                  Clinic Hours
                 </h3>
                 <div className="space-y-3">
-                  {doctor.consultationHours?.map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-                      <span className="text-sm font-medium text-gray-900">{schedule.day}</span>
-                      <span className="text-sm text-gray-600">{schedule.time}</span>
+                  <motion.div 
+                    className="flex justify-between items-center py-3 px-3 rounded-lg bg-green-50 border border-green-200"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <span className="text-sm font-medium text-gray-900 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      Monday - Saturday
+                    </span>
+                    <div className="text-right">
+                      <div className="text-sm text-gray-600">9:30 AM - 1:00 PM</div>
+                      <div className="text-sm text-gray-600">4:30 PM - 8:00 PM</div>
                     </div>
-                  ))}
+                  </motion.div>
+                  <motion.div 
+                    className="flex justify-between items-center py-3 px-3 rounded-lg bg-red-50 border border-red-200"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <span className="text-sm font-medium text-gray-900 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      Sunday
+                    </span>
+                    <span className="text-sm text-red-600 font-medium">Closed</span>
+                  </motion.div>
                 </div>
               </div>
 
               {/* Languages */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover hover-glow group">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Users className="w-5 h-5 text-indigo-600 icon-spin" />
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Users className="w-5 h-5 text-indigo-600" />
+                  </motion.div>
                   Languages Spoken
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {doctor.languages?.map((lang, index) => (
-                    <span
+                    <motion.span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                      className="px-3 py-2 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-full text-sm font-medium border border-gray-300 cursor-pointer"
+                      whileHover={{ 
+                        scale: 1.05,
+                        backgroundColor: "#6366F1",
+                        color: "#FFFFFF",
+                        boxShadow: "0 4px 12px rgba(99, 102, 241, 0.3)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.15, duration: 0.4 }}
                     >
                       {lang}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
 
-              {/* Contact Actions */}
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-100 space-y-4 card-hover hover-glow group">
+              {/* Clinic Contact */}
+              <motion.div 
+                className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-100 space-y-4 hover:shadow-xl transition-all duration-300"
+                whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.15)" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <h3 className="text-lg font-bold text-gray-900 mb-4 text-center flex items-center justify-center gap-2">
-                  <Calendar className="w-5 h-5 text-purple-600 icon-spin" />
-                  Book Your Appointment
+                  <motion.div
+                    animate={{ y: [0, -3, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Building className="w-5 h-5 text-purple-600" />
+                  </motion.div>
+                  Visit Darsh Dental Clinic
                 </h3>
-                <Link
-                  href="/contact"
-                  className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold text-center block transform hover:scale-105 shadow-lg hover:shadow-xl button-bounce"
-                >
-                  📅 Book Appointment
-                </Link>
-                <a
-                  href="tel:+919428305428"
-                  className="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-center block transform hover:scale-105 shadow-lg hover:shadow-xl button-bounce"
-                >
-                  📞 Call Now
-                </a>
-                <a
-                  href="https://wa.me/919428305428"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-all duration-300 font-semibold text-center flex items-center justify-center gap-2 transform hover:scale-105 shadow-lg hover:shadow-xl button-bounce"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp Chat
-                </a>
-              </div>
+                <div className="text-center space-y-3">
+                  <motion.p 
+                    className="text-gray-600 text-sm"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                  >
+                    Our team of expert dentists works together to provide comprehensive care
+                  </motion.p>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link
+                      href="/contact"
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-center block shadow-lg hover:shadow-xl"
+                    >
+                      📅 Book Appointment
+                    </Link>
+                  </motion.div>
+                  <div className="flex gap-2">
+                    <motion.a
+                      href="tel:+919428305428"
+                      className="flex-1 bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-300 font-semibold text-center block shadow-lg hover:shadow-xl text-sm"
+                      whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(34, 197, 94, 0.3)" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      📞 Call
+                    </motion.a>
+                    <motion.a
+                      href="https://wa.me/919428305428"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-4 py-2 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all duration-300 font-semibold text-center flex items-center justify-center gap-1 shadow-lg hover:shadow-xl text-sm"
+                      whileHover={{ scale: 1.05, boxShadow: "0 8px 25px rgba(16, 185, 129, 0.3)" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      WhatsApp
+                    </motion.a>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -782,7 +846,8 @@ const DoctorPage = ({ params }) => {
 
       <Footer />
       <WhatsAppButton />
-    </div>
+      </div>
+    </ReactLenis>
   );
 };
 

@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { ReactLenis } from "lenis/react";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import TimelineSection from "../../components/TimelineSection";
+import TechnologySection from "../../components/TechnologySection";
 import { CardSpotlight } from "../../components/ui/card-spotlight";
 import CountAnimation from "../../components/count-animation";
 import TextReveal from "../../components/forgeui/text-reveal";
@@ -178,7 +180,8 @@ export default function Services() {
   const displayedServices = showAllServices ? allServices : allServices.slice(0, 12);
 
   return (
-    <div className="min-h-screen bg-white">
+    <ReactLenis root>
+      <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section - Mobile First */}
@@ -520,6 +523,9 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Technology Transformation Section */}
+      <TechnologySection />
+
       {/* Enhanced Complete Services List - Fully responsive */}
       <section className="relative py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 
                          bg-gradient-to-b from-white via-gray-50 to-white">
@@ -721,7 +727,8 @@ export default function Services() {
 
       <Footer />
       <WhatsAppButton />
-    </div>
+      </div>
+    </ReactLenis>
   );
 }
 

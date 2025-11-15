@@ -117,7 +117,7 @@ export const Header = () => {
         
         {/* Call-to-Action with Interactive Hover Button */}
         <div className="mt-12 flex justify-center">
-          <Link href="https://www.practo.com" target="_blank" rel="noopener noreferrer">
+          <Link href="/contact">
             <InteractiveHoverButton
               className="bg-black text-white border-black px-8 py-4 text-base md:text-lg hover:bg-black/90"
             >

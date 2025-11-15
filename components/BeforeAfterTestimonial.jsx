@@ -18,20 +18,20 @@ const testimonials = [
   {
     id: 1,
     name: "Patient 1",
-    beforeImage: "/testimonial/before1.png",
-    afterImage: "/testimonial/after1.png"
+    beforeImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200734/before1_y32obn.png",
+    afterImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200732/after1_bwbcoe.png"
   },
   {
     id: 2,
     name: "Patient 2", 
-    beforeImage: "/testimonial/before2.png",
-    afterImage: "/testimonial/after2.png"
+    beforeImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200734/before2_ooecnb.png",
+    afterImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200733/after2_ttcmz3.png"
   },
   {
     id: 3,
     name: "Patient 3",
-    beforeImage: "/testimonial/before3.png",
-    afterImage: "/testimonial/after3.png"
+    beforeImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200735/before3_v32yey.png",
+    afterImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200733/after3_qlhqxy.png"
   }
 ];
 
@@ -138,15 +138,7 @@ export default function BeforeAfterTestimonial() {
             </p>
           </div>
 
-          {/* CTA Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl mx-auto"
-          >
-            <Calendar className="w-5 h-5" />
-            Book Your Appointment Now
-          </motion.button>
+
         </div>
       </div>
     </section>

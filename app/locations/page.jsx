@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ReactLenis } from "lenis/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import WhatsAppButton from "../../components/WhatsAppButton";
+import TimelineSection from "../../components/TimelineSection";
 import { CardSpotlight } from "../../components/ui/card-spotlight";
 import CountAnimation from "../../components/count-animation";
 import TextReveal from "../../components/forgeui/text-reveal";
@@ -273,7 +275,8 @@ const LocationsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <ReactLenis root>
+      <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
@@ -808,9 +811,13 @@ const LocationsPage = () => {
         </div>
       </section>
 
+      {/* Why We Stand Out Timeline Section */}
+      <TimelineSection />
+
       <Footer />
       <WhatsAppButton />
-    </div>
+      </div>
+    </ReactLenis>
   );
 };
 

@@ -211,6 +211,12 @@ const TechnologySection = () => {
 
   return (
     <section ref={sectionRef} className="relative py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      {/* Main Background with Fade-out Effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-transparent"></div>
+      
+      {/* Fade-out overlay towards bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/50 pointer-events-none"></div>
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-xl animate-pulse"></div>
@@ -305,7 +311,7 @@ const TechnologySection = () => {
           <div ref={imageRef} className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="/dental-equipment.jpg"
+                src="https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200752/dental-equipment_f5wmlm.jpg"
                 alt="Advanced Dental Technology at Darsh Dental Clinic"
                 width={600}
                 height={700}
@@ -340,118 +346,7 @@ const TechnologySection = () => {
           </div>
         </div>
 
-        {/* Advanced Features Grid - Enhanced Design */}
-        <div className="relative">
-          {/* Background with Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-3xl"></div>
-          
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/50">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full px-6 py-2 mb-6 shadow-lg">
-                <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-medium uppercase tracking-wider">
-                  Why Choose Our Technology?
-                </span>
-              </div>
-              
-              <TextReveal
-                text="Experience the Future of Dental Care"
-                className="text-3xl md:text-4xl font-bold font-manrope text-gray-900 mb-6"
-                duration={0.8}
-                staggerDelay={0.08}
-              />
-              
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
-              </div>
-              
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our state-of-the-art technology ensures precise, comfortable, and efficient dental treatments for every patient.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {advancedFeatures.map((feature, index) => {
-                const Icon = feature.icon;
-                const colors = [
-                  "from-blue-500 to-cyan-500",
-                  "from-purple-500 to-pink-500", 
-                  "from-green-500 to-emerald-500",
-                  "from-orange-500 to-red-500",
-                  "from-indigo-500 to-blue-500",
-                  "from-pink-500 to-rose-500"
-                ];
-                const bgColors = [
-                  "bg-blue-50 border-blue-200",
-                  "bg-purple-50 border-purple-200",
-                  "bg-green-50 border-green-200", 
-                  "bg-orange-50 border-orange-200",
-                  "bg-indigo-50 border-indigo-200",
-                  "bg-pink-50 border-pink-200"
-                ];
-                
-                return (
-                  <div
-                    key={index}
-                    ref={(el) => (featuresRef.current[index] = el)}
-                    className={`group relative p-8 rounded-2xl ${bgColors[index % bgColors.length]} border-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 cursor-pointer`}
-                  >
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
-                    {/* Icon with Gradient Background */}
-                    <div className={`relative w-20 h-20 bg-gradient-to-br ${colors[index % colors.length]} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300`}>
-                      <Icon className="w-10 h-10 text-white" />
-                      
-                      {/* Floating particles effect */}
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                      <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-white/70 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce" style={{ animationDelay: "0.2s" }}></div>
-                    </div>
-                    
-                    <div className="relative text-center">
-                      <h4 className="text-xl font-bold font-manrope text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
-                        {feature.feature}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
-                        {feature.benefit}
-                      </p>
-                    </div>
-                    
-                    {/* Animated bottom border */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover:w-3/4 transition-all duration-500"></div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Bottom CTA Section */}
-            <div className="mt-16 text-center">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl">
-                <h4 className="text-2xl font-bold font-manrope mb-4">Ready to Experience Advanced Dental Care?</h4>
-                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                  Book your appointment today and discover how our cutting-edge technology can transform your dental experience.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-50 transition-all duration-300 font-semibold group shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    <Sparkles className="w-5 h-5" />
-                    Book Consultation
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <div className="flex items-center gap-2 text-blue-100">
-                    <CheckCircle className="w-5 h-5" />
-                    <span className="text-sm">Free Initial Consultation</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Keep only the main technology showcase - removed the 'Why Choose' section */}
       </div>
 
       {/* Wave Divider at Bottom */}

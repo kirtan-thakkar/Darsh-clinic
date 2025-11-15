@@ -7,6 +7,7 @@ import BeforeAfterTestimonial from "../components/BeforeAfterTestimonial";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import SmoothScroll from "../components/ui/SmoothScroll";
+import { ReactLenis } from "lenis/react";
 import { HeroParallax } from "../components/ui/hero-parallax";
 import StaggeredFAQSection from "../components/ruixen/staggered-faq-section";
 import Image from "next/image";
@@ -31,62 +32,62 @@ export default function Home() {
     {
       title: "Digital Smile Design",
       link: "/services",
-      thumbnail: "/jonathan-borba-W9YEY6G8LVM-unsplash.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200689/jonathan-borba-W9YEY6G8LVM-unsplash_co5oj5.jpg",
     },
     {
       title: "Invisalign Clear Aligners",
       link: "/services",
-      thumbnail: "/atikah-akhtar-XJptUS8nbhs-unsplash.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200688/atikah-akhtar-XJptUS8nbhs-unsplash_cr0gs4.jpg",
     },
     {
       title: "Teeth Whitening",
       link: "/services",
-      thumbnail: "/amr-taha-uvnMQXF56kQ-unsplash.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200687/amr-taha-uvnMQXF56kQ-unsplash_vvkhid.jpg",
     },
     {
       title: "Dental Implants",
       link: "/services",
-      thumbnail: "/ozkan-guner-GxctDhxhbxM-unsplash.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200690/ozkan-guner-GxctDhxhbxM-unsplash_ajpxai.jpg",
     },
     {
       title: "Root Canal Therapy",
       link: "/services",
-      thumbnail: "/dental-clinic-interior.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200746/dental-clinic-interior_nsy34s.jpg",
     },
     {
       title: "Periodontal Care",
       link: "/services",
-      thumbnail: "/dental-equipment.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200752/dental-equipment_f5wmlm.jpg",
     },
     {
       title: "Cosmetic Dentistry",
       link: "/services",
-      thumbnail: "/cosmetic-dentistry.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200746/cosmetic-dentistry_heezog.jpg",
     },
     {
       title: "Oral Surgery",
       link: "/services",
-      thumbnail: "/hero1.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200623/hero1_r1cyop.jpg",
     },
     {
       title: "Pediatric Dentistry",
       link: "/services",
-      thumbnail: "/pediatric-dentistry.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200766/hero5_xw6fmw.jpg",
     },
     {
       title: "Emergency Care",
       link: "/services",
-      thumbnail: "/hero2.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200623/hero2_wlp9p0.jpg",
     },
     {
       title: "Preventive Care",
       link: "/services",
-      thumbnail: "/hero3.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200626/hero3_ffwkt3.jpg",
     },
     {
       title: "Advanced Dental Care",
       link: "/services",
-      thumbnail: "/hero4.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200624/hero4_jcnfea.jpg",
     },
     {
       title: "Comfort & Care",
@@ -101,7 +102,7 @@ export default function Home() {
     {
       title: "Expert Treatment",
       link: "/services",
-      thumbnail: "/ozkan-guner-NUPZa4bbi_0-unsplash.jpg",
+      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200638/ozkan-guner-NUPZa4bbi_0-unsplash_dv6imq.jpg",
     }
   ];
 
@@ -160,7 +161,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <ReactLenis root>
       <div className="min-h-screen w-full relative">
         {/* Dashed Grid */}
         <div
@@ -265,7 +266,18 @@ export default function Home() {
             </div>
 
             {/* Before & After Testimonials Section */}
-            <div className="relative">
+            <div className="relative bg-gray-50">
+              <div className="absolute top-0 left-0 w-full h-auto transform -scale-y-100">
+                <Image
+                  src="/wavesNegative.svg"
+                  alt="Wave divider"
+                  width={1200}
+                  height={60}
+                  className="w-full h-auto"
+                  style={{ display: 'block' }}
+                />
+              </div>
+              
               <BeforeAfterTestimonial />
             </div>
 
@@ -382,6 +394,6 @@ export default function Home() {
 
       {/* WhatsApp Button */}
       <WhatsAppButton />
-    </>
+    </ReactLenis>
   );
 }

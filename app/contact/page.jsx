@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { ReactLenis } from "lenis/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import WhatsAppButton from "../../components/WhatsAppButton";
+import TimelineSection from "../../components/TimelineSection";
 import { CardSpotlight } from "../../components/ui/card-spotlight";
 import CountAnimation from "../../components/count-animation";
 import TextReveal from "../../components/forgeui/text-reveal";
@@ -17,11 +19,11 @@ import {
   CheckCircle,
   Send,
   MessageCircle,
+  Building,
+  AlertCircle,
   Navigation as NavigationIcon,
   Star,
   ArrowRight,
-  Building,
-  AlertCircle,
 } from "lucide-react";
 
 
@@ -404,7 +406,8 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <ReactLenis root>
+      <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
@@ -982,8 +985,11 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Emergency Contact Section */}
-      <section className="relative py-20 bg-gray-50">
+      {/* Why We Stand Out Timeline Section */}
+      <TimelineSection />
+
+      {/* Premium Emergency Contact Section */}
+      <section className="relative py-20 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
         {/* Wave at top */}
         <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
           <svg 
@@ -997,78 +1003,141 @@ const ContactPage = () => {
           </svg>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
-          <div ref={emergencyRef} className="text-center">
-            <div className="bg-red-50 border border-red-200 rounded-2xl p-8 md:p-12">
-              <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <AlertCircle className="w-10 h-10 text-red-500" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
+          <div ref={emergencyRef} className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-red-200/50 rounded-full px-6 py-3 mb-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group cursor-pointer">
+              <div className="relative">
+                <AlertCircle className="w-5 h-5 text-red-600 group-hover:text-red-700 transition-colors duration-300" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping opacity-75"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
               </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Emergency Dental Care
-              </h2>
-              
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Experiencing severe tooth pain, dental trauma, or urgent dental issues? 
-                Don't wait – our emergency dental services are available 24/7.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white rounded-lg p-6 border border-red-200">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Main Emergency Line</h3>
-                  <a
-                    href="tel:+919925456519"
-                    className="flex items-center justify-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors font-semibold"
-                  >
-                    <Phone className="w-5 h-5" />
-                    +91 99254 56519
-                  </a>
+              <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 uppercase tracking-wider transition-colors duration-300">
+                EMERGENCY DENTAL CARE
+              </span>
+              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse ml-1"></div>
+            </div>
+
+            <TextReveal
+              text="24/7 Emergency Dental Services"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold font-manrope text-gray-900 mb-6"
+              duration={0.8}
+              staggerDelay={0.1}
+            />
+
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              Dental emergencies can't wait. Our expert team is ready to provide immediate care 
+              when you need it most, with advanced pain management and urgent treatment protocols.
+            </p>
+          </div>
+
+          {/* Premium Emergency Contact Cards */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Main Emergency Card */}
+            <div className="lg:col-span-2">
+              <CardSpotlight className="h-full p-8 bg-white hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Phone className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Primary Emergency Line</h3>
+                    <p className="text-gray-600 mb-6">Available 24/7 for all dental emergencies across Vadodara. Direct line to our emergency response team.</p>
+                    
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a
+                        href="tel:+919925456519"
+                        className="flex items-center justify-center gap-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold group shadow-lg hover:shadow-xl transform hover:scale-105"
+                      >
+                        <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                        +91 99254 65919
+                        <div className="w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+                      </a>
+                      
+                      <a
+                        href="https://wa.me/919925456519?text=🚨 Emergency: Need immediate dental care"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold group shadow-lg hover:shadow-xl transform hover:scale-105"
+                      >
+                        <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                        WhatsApp Emergency
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="bg-white rounded-lg p-6 border border-red-200">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Ajwa Road Emergency</h3>
+              </CardSpotlight>
+            </div>
+
+            {/* Ajwa Road Emergency */}
+            <div className="lg:col-span-1">
+              <CardSpotlight className="h-full p-8 bg-white hover:shadow-2xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Building className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Ajwa Road Clinic</h3>
+                  <p className="text-gray-600 mb-6 text-sm">Dedicated emergency line for Ajwa Road location</p>
+                  
                   <a
                     href="tel:+919099246833"
-                    className="flex items-center justify-center gap-2 bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors font-semibold"
+                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold group shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     +91 90992 46833
                   </a>
                 </div>
+              </CardSpotlight>
+            </div>
+          </div>
+
+          {/* Emergency Conditions Grid */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">When to Call Emergency Dental Care</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: "🦷", title: "Severe Tooth Pain", desc: "Unbearable pain that disrupts daily activities" },
+                { icon: "💥", title: "Dental Trauma", desc: "Knocked-out, loose, or severely damaged teeth" },
+                { icon: "🩸", title: "Oral Bleeding", desc: "Persistent bleeding from gums or soft tissues" },
+                { icon: "😷", title: "Facial Swelling", desc: "Significant swelling affecting face or neck" },
+                { icon: "🔥", title: "Dental Abscess", desc: "Infected tooth with pus and severe pain" },
+                { icon: "💊", title: "Lost Restoration", desc: "Emergency replacement of crowns or fillings" }
+              ].map((condition, index) => (
+                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group">
+                  <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{condition.icon}</div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">{condition.title}</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">{condition.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Emergency Instructions */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 shadow-lg">
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <AlertCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Emergency Protocol</h3>
+              <p className="text-gray-600">Follow these steps for optimal emergency care</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-blue-50 rounded-xl border border-blue-200">
+                <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+                <h4 className="font-bold text-gray-900 mb-2">Call Immediately</h4>
+                <p className="text-gray-600 text-sm">Contact our emergency line for immediate assessment and guidance</p>
               </div>
               
-              <div className="bg-white rounded-lg p-6 border border-red-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Common Dental Emergencies:</h3>
-                <div className="grid md:grid-cols-2 gap-4 text-sm">
-                  <ul className="space-y-2 text-gray-600 text-left">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      Severe tooth pain
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      Knocked-out tooth
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      Broken or chipped tooth
-                    </li>
-                  </ul>
-                  <ul className="space-y-2 text-gray-600 text-left">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      Dental abscess
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      Lost filling or crown
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      Soft tissue injuries
-                    </li>
-                  </ul>
-                </div>
+              <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200">
+                <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+                <h4 className="font-bold text-gray-900 mb-2">Follow First Aid</h4>
+                <p className="text-gray-600 text-sm">Apply cold compress, save any broken pieces, avoid aspirin</p>
+              </div>
+              
+              <div className="text-center p-6 bg-purple-50 rounded-xl border border-purple-200">
+                <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+                <h4 className="font-bold text-gray-900 mb-2">Visit Our Clinic</h4>
+                <p className="text-gray-600 text-sm">Come to the nearest location for immediate professional treatment</p>
               </div>
             </div>
           </div>
@@ -1077,7 +1146,8 @@ const ContactPage = () => {
 
       <Footer />
       <WhatsAppButton />
-    </div>
+      </div>
+    </ReactLenis>
   );
 };
 

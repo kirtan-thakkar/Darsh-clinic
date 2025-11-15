@@ -126,12 +126,26 @@ const TrustSection = () => {
           
           <Marquee className="py-4 [--duration:40s]" pauseOnHover={true}>
             {[
-              { name: "Sarah M.", text: "Amazing care! Dr. Darsh made my root canal completely painless.", rating: 5 },
-              { name: "John D.", text: "Professional staff and modern equipment. Highly recommend!", rating: 5 },
-              { name: "Maria L.", text: "Finally found a dentist who understands my anxiety. Thank you!", rating: 5 },
-              { name: "Robert K.", text: "Best dental experience ever. Clean facility and gentle approach.", rating: 5 },
-              { name: "Lisa W.", text: "Transformed my smile with their cosmetic dentistry. Love it!", rating: 5 },
-              { name: "Mike T.", text: "Emergency visit handled perfectly. Great bedside manner.", rating: 5 }
+              { name: "A. Patel", text: "Exceptional experience! Dr. Dheeraj explained everything clearly, and the treatment was completely painless.", rating: 5 },
+              { name: "R. Shah", text: "Very professional staff and excellent hygiene standards. Highly recommended for quality dental care!", rating: 5 },
+              { name: "S. Mehta", text: "Quick, accurate diagnosis and effective treatment. The entire team is incredibly polite and caring.", rating: 5 },
+              { name: "N. Joshi", text: "Best dental experience I've ever had! The doctor truly cares about patients and their comfort.", rating: 5 },
+              { name: "P. Parmar", text: "Spotlessly clean clinic with modern equipment and genuinely friendly staff behavior.", rating: 5 },
+              { name: "K. Trivedi", text: "I was terrified of dental treatments, but the doctor made me feel completely comfortable and at ease.", rating: 5 },
+              { name: "M. Rana", text: "Affordable yet high-quality treatment that exceeded my expectations. Completely satisfied!", rating: 5 },
+              { name: "D. Solanki", text: "Outstanding service with punctual appointments and incredibly cooperative doctors throughout.", rating: 5 },
+              { name: "H. Oza", text: "Perfect destination for dental care! The staff guided and supported me throughout the entire process.", rating: 5 },
+              { name: "Y. Chauhan", text: "Professional, calm, and experienced doctor who delivers excellent results consistently.", rating: 5 },
+              { name: "J. Vora", text: "Refreshingly honest! They provide genuine advice without pushing unnecessary treatments.", rating: 5 },
+              { name: "T. Shah", text: "Incredibly smooth procedure with clear explanations at every step. Outstanding patient care!", rating: 5 },
+              { name: "V. Desai", text: "I truly appreciate the exceptional care and patience the doctor showed during my visit.", rating: 5 },
+              { name: "C. Gajjar", text: "The clinic maintains impeccable hygiene standards and uses the latest advanced equipment.", rating: 5 },
+              { name: "L. Panchal", text: "Hands down the best dental hospital in the area! Friendly experts who really know their craft.", rating: 5 },
+              { name: "S. Rathod", text: "Treatment was painless and remarkably effective. I recommend them to everyone without hesitation!", rating: 5 },
+              { name: "R. Suthar", text: "Highly skilled doctors who provide quick, efficient service without compromising on quality.", rating: 5 },
+              { name: "N. Pandya", text: "They handled my dental emergency immediately and with complete professionalism. Lifesavers!", rating: 5 },
+              { name: "F. Sheikh", text: "Wonderful experience! The doctor listened carefully and provided treatment exactly as needed.", rating: 5 },
+              { name: "P. Dave", text: "Exceptional hospitality, excellent treatment quality, and genuinely caring staff throughout.", rating: 5 }
             ].map((testimonial, i) => (
               <div key={i} className="flex-shrink-0 mx-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20 w-80 hover:shadow-xl transition-shadow duration-300">

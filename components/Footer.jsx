@@ -230,20 +230,6 @@ const Footer = () => {
 
   return (
     <footer ref={footerRef} className="relative bg-black text-white hardware-acceleration">
-      {/* Enhancement Wave mask at top - Responsive */}
-      <div className="absolute top-0 left-0 w-full h-12 xs:h-14 sm:h-16 overflow-hidden">
-        <div className="absolute inset-0 bg-black transform -scale-y-100 translate-y-1">
-          <Image
-            src="/wavesNegative.svg"
-            alt="Wave divider"
-            width={1200}
-            height={60}
-            className="w-full h-auto opacity-100"
-            style={{ display: "block" }}
-            priority
-          />
-        </div>
-      </div>
 
       <div className="relative z-20 container-fluid max-w-7xl 
                      pt-16 xs:pt-18 sm:pt-20 md:pt-24 
