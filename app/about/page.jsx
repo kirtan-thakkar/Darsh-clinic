@@ -261,8 +261,8 @@ const AboutPage = () => {
   // Team members data with unique IDs
   const teamMembers = [
     {
-      id: "dr-dheeraj-naik-001",
-      name: "Dr. Dheeraj Naik",
+      id: "dr-dhiraj-nayak-001",
+      name: "Dr. Dhiraj Nayak",
       role: "Founder & Chief Dental Officer",
       specialization: "General & Cosmetic Dentistry",
       experience: "15+ Years",
@@ -511,7 +511,7 @@ const AboutPage = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
                 <Image
                   src="https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200746/dental-clinic-interior_nsy34s.jpg"
-                  alt="Dr. Dheeraj Naik at Darsh Dental Clinic - Our Vision of Excellence"
+                  alt="Dr. Dhiraj Nayak at Darsh Dental Clinic - Our Vision of Excellence"
                   width={600}
                   height={700}
                   className="w-full h-[500px] lg:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
@@ -606,7 +606,7 @@ const AboutPage = () => {
                 className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed"
               >
                 From a visionary dream in 2008 to becoming Vadodara's most trusted dental care destination. 
-                Dr. Dheeraj Naik's journey of excellence, innovation, and compassionate care.
+                Dr. Dhiraj Nayak's journey of excellence, innovation, and compassionate care.
               </motion.p>
 
               {/* Premium Stats Cards */}
@@ -970,7 +970,7 @@ const AboutPage = () => {
 
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
               Our expert team is here to answer your questions and help you achieve the smile of your dreams. 
-              Contact us today for a personalized consultation with Dr. Dheeraj Naik.
+              Contact us today for a personalized consultation with Dr. Dhiraj Nayak.
             </p>
 
             {/* Contact Cards */}

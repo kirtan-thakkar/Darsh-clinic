@@ -517,7 +517,6 @@ const ContactPage = () => {
             Contact us today to schedule your consultation.
           </p>
 
-          {/* Interactive Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
               <Phone className="w-8 h-8 text-blue-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
@@ -564,7 +563,6 @@ const ContactPage = () => {
 
       {/* Contact Methods Section */}
       <section className="relative py-20 bg-gray-50">
-        {/* Wave at top */}
         <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
           <svg 
             className="absolute bottom-0 w-full h-full"

@@ -29,10 +29,28 @@ import {
  const metadata = {
   title: "Dental Services in Vadodara - Dr. Dhiraj Nayak | Darsh Dental Clinic",
   description: "Comprehensive dental services by Dr. Dhiraj Nayak at Darsh Dental Clinic. Dental implants, root canal, scaling, orthodontics, oral surgery & more. Expert care across 3 locations in Vadodara.",
-  keywords: "dental services vadodara, dr dheeraj naik, root canal treatment, dental implants, scaling polishing, tooth extraction, orthodontics, oral surgery, cosmetic dentistry",
+  keywords: "dental services vadodara, dr dhiraj nayak, root canal treatment, dental implants, scaling polishing, tooth extraction, orthodontics, oral surgery, cosmetic dentistry",
+  canonicalUrl: "https://darshdentalclinic.com/services",
+  robots: "index, follow",
   openGraph: {
     title: "Complete Dental Services - Dr. Dhiraj Nayak | Darsh Dental Clinic",
     description: "Expert dental treatments including implants, root canal, scaling, orthodontics by Dr. Dhiraj Nayak. Advanced care at 3 convenient locations in Vadodara.",
+    url: "https://darshdentalclinic.com/services",
+    type: "website",
+    siteName: "Darsh Dental Clinic",
+    images: [
+      {
+        url: '/og-services-darsh-clinic.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dental Services at Darsh Dental Clinic',
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dental Services - Dr. Dhiraj Nayak",
+    description: "Complete dental care including implants, root canals, orthodontics by Dr. Dhiraj Nayak",
     images: ['/og-services-darsh-clinic.jpg'],
   },
 };
