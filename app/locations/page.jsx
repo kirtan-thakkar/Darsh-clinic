@@ -200,7 +200,7 @@ const LocationsPage = () => {
       city: "VADODARA, Gujarat, INDIA",
       phone: "+91 992 5465919",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
-      mapUrl: "https://maps.google.com/?q=22.321083,73.197296",
+      mapUrl: "https://www.google.com/maps/dir//Chitra+Complex,+302,+Muktanand+Cir,+Kalyan+Nagar,+Karelibagh,+Vadodara,+Gujarat+390018/@22.3125031,73.1943257,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fcf9c4902db2d:0xe62136ad439f11e!2m2!1d73.1973248!2d22.3211636?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D",
       isMain: true,
       features: [
         "Main Clinic",
@@ -219,7 +219,7 @@ const LocationsPage = () => {
       city: "VADODARA, Gujarat, INDIA",
       phone: "+91 997 8083930",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
-      mapUrl: "https://maps.google.com/?q=22.2734,73.1953",
+      mapUrl: "https://www.google.com/maps/dir//Earth+Icon,+Khodiyar+Nagar,+New+VIP+Road,+Vadodara,+Gujarat/@22.2734,73.1953,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fcf5c0c0e0e0e:0x123456789abcdef0!2m2!1d73.1953!2d22.2734?entry=ttu",
       isMain: false,
       features: [
         "Modern Equipment",
@@ -238,7 +238,7 @@ const LocationsPage = () => {
       phone: "+91 997 4613749",
       emergencyPhone: "9099246833",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
-      mapUrl: "https://maps.google.com/?q=22.3168,73.1650",
+      mapUrl: "https://www.google.com/maps/dir//Saujanya+Trilake,+Ajwa+Road,+Kamlanagar,+Vadodara,+Gujarat/@22.3168,73.1650,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fcf5c0c0e0e0e:0x987654321fedcba0!2m2!1d73.1650!2d22.3168?entry=ttu",
       isMain: false,
       features: [
         "Lake View",
@@ -545,14 +545,15 @@ const LocationsPage = () => {
               <div
                 key={location.id}
                 ref={(el) => (locationsRef.current[index] = el)}
-                className="group"
+                className="group cursor-pointer"
+                onClick={() => window.open(location.mapUrl, '_blank')}
               >
-                <CardSpotlight className="h-full p-6 bg-white">
+                <CardSpotlight className="h-full p-6 bg-white hover:shadow-xl transition-all duration-300 hover:scale-105">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                           {location.name}
                         </h3>
                         {location.isMain && (
@@ -564,6 +565,10 @@ const LocationsPage = () => {
                       <p className="text-sm text-gray-500 mb-1">
                         {location.landmark}
                       </p>
+                    </div>
+                    <div className="flex items-center gap-1 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <NavigationIcon className="w-4 h-4" />
+                      <span className="text-xs font-medium">View on Map</span>
                     </div>
                   </div>
 
@@ -636,6 +641,7 @@ const LocationsPage = () => {
                       href={location.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-800 rounded hover:border-gray-700 text-gray-800 hover:text-gray-900 transition-colors group text-sm font-medium"
                     >
                       <NavigationIcon className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -643,6 +649,7 @@ const LocationsPage = () => {
                     </a>
                     <a
                       href={`tel:${location.phone}`}
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 text-white rounded hover:bg-gray-800 transition-colors group text-sm font-medium"
                     >
                       <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
