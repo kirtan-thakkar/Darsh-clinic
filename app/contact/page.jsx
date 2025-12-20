@@ -16,7 +16,6 @@ import {
   Clock,
   Mail,
   Calendar,
-  CheckCircle,
   Send,
   MessageCircle,
   Building,
@@ -30,7 +29,6 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactPage = () => {
-  // Form state (no database, just for UI interaction)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,7 +43,6 @@ const ContactPage = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [activeLocation, setActiveLocation] = useState(0);
 
-  // Custom CSS animations
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = `
@@ -516,7 +513,7 @@ const ContactPage = () => {
           />
 
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to transform your smile? Dr. Dheeraj Naik and our expert team are here to provide personalized dental care. 
+            Ready to transform your smile? Dr. Dhiraj Nayak and our expert team are here to provide personalized dental care. 
             Contact us today to schedule your consultation.
           </p>
 

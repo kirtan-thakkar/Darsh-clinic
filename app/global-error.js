@@ -37,7 +37,7 @@ export default function GlobalError({ error, reset }) {
 
                         {/* Medical themed message */}
                         <div className="flex items-center justify-center gap-2 text-black mb-8 font-semibold">
-                            <span>Dr. Dheeraj Naik&apos;s Dental Care - We&apos;ll Get This Fixed!</span>
+                            <span>Dr. Dhiraj Nayak&apos;s Dental Care - We&apos;ll Get This Fixed!</span>
                         </div>
 
                         {/* Action Buttons */}

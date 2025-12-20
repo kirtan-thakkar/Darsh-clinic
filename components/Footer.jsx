@@ -253,7 +253,7 @@ const Footer = () => {
                 className="text-sm xs:text-base sm:text-lg md:text-xl 
                          text-gray-300 leading-relaxed"
               >
-                Expert dental care by Dr. Dheeraj Naik with 15+ years of experience.
+                Expert dental care by Dr. Dhiraj Nayak with 15+ years of experience.
                 State-of-the-art technology and compassionate service across 3 convenient
                 locations in Vadodara.
               </p>

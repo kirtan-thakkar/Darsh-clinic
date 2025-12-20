@@ -199,7 +199,7 @@ const HeroSection = () => {
 
             {/* Description with TextReveal */}
             <TextReveal
-              text="Experience 15+ years of excellence with Dr. Dheeraj Naik. Advanced treatments, painless procedures, and compassionate care across 3 convenient locations in Vadodara."
+              text="Experience 15+ years of excellence with Dr. Dhiraj Nayak. Advanced treatments, painless procedures, and compassionate care across 3 convenient locations in Vadodara."
               className="text-xl text-gray-600 leading-relaxed max-w-2xl"
               duration={1.0}
               staggerDelay={0.06}
@@ -220,7 +220,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center space-x-2 bg-white/80 px-4 py-2 rounded-lg shadow-sm">
                 <Users className="w-5 h-5 text-blue-600" />
-                <span className="font-semibold text-gray-900">2000+</span>
+                <span className="font-semibold text-gray-900">1000+</span>
                 <span className="text-gray-600">Happy Patients</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/80 px-4 py-2 rounded-lg shadow-sm">
@@ -268,7 +268,7 @@ const HeroSection = () => {
             variants={staggerContainer}
             className="relative"
           >
-            {/* Hero Image - Dr. Dheeraj */}
+            {/* Hero Image - Dr. Dhiraj Nayak */}
             <motion.div 
               variants={fadeInUp}
               className="relative mb-6"
@@ -276,7 +276,7 @@ const HeroSection = () => {
               <div className="aspect-[3/4] max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl group">
                 <Image
                   src="https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200687/amr-taha-uvnMQXF56kQ-unsplash_vvkhid.jpg"
-                  alt="Professional Dental Care at Darsh Dental Clinic"
+                  alt="Dr. Dhiraj Nayak - Professional Dental Care at Darsh Dental Clinic"
                   width={400}
                   height={500}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -285,7 +285,7 @@ const HeroSection = () => {
                 
                 {/* Doctor Badge */}
                 <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg">
-                  <p className="text-sm font-semibold text-gray-900">Dr. Dheeraj Naik</p>
+                  <p className="text-sm font-semibold text-gray-900">Dr. Dhiraj Nayak</p>
                   <p className="text-xs text-gray-600">15+ Years Experience</p>
                 </div>
               </div>

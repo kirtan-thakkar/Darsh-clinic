@@ -27,12 +27,12 @@ import {
 
 // SEO metadata for services page
  const metadata = {
-  title: "Dental Services in Vadodara - Dr. Dheeraj Naik | Darsh Dental Clinic",
-  description: "Comprehensive dental services by Dr. Dheeraj Naik a t Darsh Dental Clinic. Dental implants, root canal, scaling, orthodontics, oral surgery & more. Expert care across 3 locations in Vadodara.",
+  title: "Dental Services in Vadodara - Dr. Dhiraj Nayak | Darsh Dental Clinic",
+  description: "Comprehensive dental services by Dr. Dhiraj Nayak at Darsh Dental Clinic. Dental implants, root canal, scaling, orthodontics, oral surgery & more. Expert care across 3 locations in Vadodara.",
   keywords: "dental services vadodara, dr dheeraj naik, root canal treatment, dental implants, scaling polishing, tooth extraction, orthodontics, oral surgery, cosmetic dentistry",
   openGraph: {
-    title: "Complete Dental Services - Dr. Dheeraj Naik | Darsh Dental Clinic",
-    description: "Expert dental treatments including implants, root canal, scaling, orthodontics by Dr. Dheeraj Naik. Advanced care at 3 convenient locations in Vadodara.",
+    title: "Complete Dental Services - Dr. Dhiraj Nayak | Darsh Dental Clinic",
+    description: "Expert dental treatments including implants, root canal, scaling, orthodontics by Dr. Dhiraj Nayak. Advanced care at 3 convenient locations in Vadodara.",
     images: ['/og-services-darsh-clinic.jpg'],
   },
 };
@@ -276,7 +276,7 @@ export default function Services() {
           </motion.div>
 
           <TextReveal
-            text="Expert Dental Services by Dr. Dheeraj Naik"
+            text="Expert Dental Services by Dr. Dhiraj Nayak"
             className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 px-2"
             duration={0.8}
             staggerDelay={0.1}
@@ -420,7 +420,7 @@ export default function Services() {
               className="text-sm xs:text-base sm:text-lg md:text-xl 
                        text-gray-600 max-w-3xl mx-auto px-2 xs:px-4 leading-relaxed"
             >
-              Dr. Dheeraj Naik offers comprehensive dental care with state-of-the-art technology 
+              Dr. Dhiraj Nayak offers comprehensive dental care with state-of-the-art technology 
               and personalized treatment plans for every patient.
             </motion.p>
           </div>
@@ -599,7 +599,7 @@ export default function Services() {
               className="text-sm xs:text-base sm:text-lg md:text-xl 
                        text-gray-600 max-w-4xl mx-auto px-2 xs:px-4 leading-relaxed"
             >
-              From routine checkups to advanced surgical procedures - Dr. Dheeraj Naik provides 
+              From routine checkups to advanced surgical procedures - Dr. Dhiraj Nayak provides 
               complete oral healthcare under one roof
             </motion.p>
           </div>

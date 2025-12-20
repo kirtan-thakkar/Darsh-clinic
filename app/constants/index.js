@@ -24,7 +24,7 @@ export const siteMetadata = {
     "Teeth Whitening Vadodara",
     "Dental Checkup Vadodara"
   ],
-  author: "Dr. Dheeraj Naik - Darsh Dental Clinic",
+  author: "Dr. Dhiraj Nayak - Darsh Dental Clinic",
   siteUrl: "https://darshdentalclinic.com",
   image: "/og-image-darsh-clinic.jpg",
   twitterHandle: "@darshdentalclinic",
@@ -36,9 +36,9 @@ export const siteMetadata = {
 
 export const businessInfo = {
   name: "Darsh Dental Clinic",
-  doctorName: "Dr. Dheeraj Naik",
+  doctorName: "Dr. Dhiraj Nayak",
   tagline: "Advanced Dental Care with a Personal Touch",
-  slogan: "Your Smile, Our Priority - Excellence in Every Treatment by Dr. Dheeraj Naik",
+  slogan: "Your Smile, Our Priority - Excellence in Every Treatment by Dr. Dhiraj Nayak",
   phone: {
     primary: "+91 99254 56519",
     karelibaug: "+91 99254 56519",
@@ -222,8 +222,8 @@ export const localSEOData = {
 export const structuredData = {
   "@context": "https://schema.org",
   "@type": "Dentist",
-  "name": "Dr. Dheeraj Naik - Darsh Dental Clinic",
-  "description": "Expert dental care by Dr. Dheeraj Naik with 15+ years experience in Vadodara. Comprehensive oral healthcare across 3 convenient locations.",
+  "name": "Dr. Dhiraj Nayak - Darsh Dental Clinic",
+  "description": "Expert dental care by Dr. Dhiraj Nayak with 15+ years experience in Vadodara. Comprehensive oral healthcare across 3 convenient locations.",
   "url": "https://darshdentalclinic.com",
   "telephone": "+91 99254 56519",
   "email": "info@darshdentalclinic.com",

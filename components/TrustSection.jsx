@@ -126,7 +126,7 @@ const TrustSection = () => {
           
           <Marquee className="py-4 [--duration:40s]" pauseOnHover={true}>
             {[
-              { name: "A. Patel", text: "Exceptional experience! Dr. Dheeraj explained everything clearly, and the treatment was completely painless.", rating: 5 },
+              { name: "A. Patel", text: "Exceptional experience! Dr. Dhiraj explained everything clearly, and the treatment was completely painless.", rating: 5 },
               { name: "R. Shah", text: "Very professional staff and excellent hygiene standards. Highly recommended for quality dental care!", rating: 5 },
               { name: "S. Mehta", text: "Quick, accurate diagnosis and effective treatment. The entire team is incredibly polite and caring.", rating: 5 },
               { name: "N. Joshi", text: "Best dental experience I've ever had! The doctor truly cares about patients and their comfort.", rating: 5 },
@@ -182,7 +182,7 @@ const TrustSection = () => {
               ))}
             </div>
             <div className="text-left">
-              <p className="text-sm font-semibold text-slate-700">Join 2000+ happy patients</p>
+              <p className="text-sm font-semibold text-slate-700">Join 1000+ happy patients</p>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-sm">⭐</span>

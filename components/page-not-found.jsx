@@ -61,7 +61,7 @@ function MessageDisplay() {
         {/* Dental themed message */}
         <div className="flex items-center gap-2 text-black mb-8 font-semibold">
           <Heart className="w-5 h-5 text-red-500" />
-          <span>Dr. Dheeraj Naik&apos;s Dental Care - Always Here for Your Smile</span>
+          <span>Dr. Dhiraj Nayak&apos;s Dental Care - Always Here for Your Smile</span>
         </div>
 
         {/* Action Button */}

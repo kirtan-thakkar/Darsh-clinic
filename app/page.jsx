@@ -12,99 +12,39 @@ import { ReactLenis } from "lenis/react";
 import StaggeredFAQSection from "../components/ruixen/staggered-faq-section";
 import Image from "next/image";
 
-// SEO metadata for homepage
 export const metadata = {
-  title: "Best Dental Clinic in Vadodara - Darsh Dental Clinic | 3 Locations",
+  title: "Best Dental Clinic in Vadodara - Darsh Dental Clinic | Dr. Dhiraj Nayak",
   description:
-    "Expert dental care at Darsh Dental Clinic with 15+ years experience. Advanced dentistry, painless treatments & comprehensive oral healthcare across Karelibaug, VIP Road & Ajwa Road, Vadodara.",
+    "Expert dental care by Dr. Dhiraj Nayak at Darsh Dental Clinic with 15+ years experience. Advanced dentistry, painless treatments & comprehensive oral healthcare across Karelibaug, VIP Road & Ajwa Road, Vadodara.",
   keywords:
-    "darsh dental clinic, best dentist vadodara, dental care vadodara, karelibaug dentist, vip road dental clinic, ajwa road dentist",
+    "darsh dental clinic, dr dhiraj nayak, best dentist vadodara, dental care vadodara, karelibaug dentist, vip road dental clinic, ajwa road dentist",
+  canonicalUrl: "https://darshdentalclinic.com",
+  robots: "index, follow",
   openGraph: {
-    title: "Darsh Dental Clinic - Premier Dental Care in Vadodara",
+    title: "Darsh Dental Clinic - Premier Dental Care by Dr. Dhiraj Nayak",
     description:
-      "15+ years of expert dental care across 3 convenient locations in Vadodara. Advanced technology, painless treatments, emergency care available 24/7.",
+      "15+ years of expert dental care by Dr. Dhiraj Nayak across 3 convenient locations in Vadodara. Advanced technology, painless treatments, emergency care available 24/7. Join 1000+ happy patients.",
+    url: "https://darshdentalclinic.com",
+    type: "website",
+    siteName: "Darsh Dental Clinic",
+    images: [
+      {
+        url: "/og-darsh-clinic-homepage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Darsh Dental Clinic - Dr. Dhiraj Nayak",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Darsh Dental Clinic - Expert Dental Care",
+    description: "Expert dental services by Dr. Dhiraj Nayak. 1000+ happy patients across Vadodara.",
     images: ["/og-darsh-clinic-homepage.jpg"],
   },
 };
 
 export default function Home() {
-  const heroProducts = [
-    {
-      title: "Digital Smile Design",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200689/jonathan-borba-W9YEY6G8LVM-unsplash_co5oj5.jpg",
-    },
-    {
-      title: "Invisalign Clear Aligners",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200688/atikah-akhtar-XJptUS8nbhs-unsplash_cr0gs4.jpg",
-    },
-    {
-      title: "Teeth Whitening",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200687/amr-taha-uvnMQXF56kQ-unsplash_vvkhid.jpg",
-    },
-    {
-      title: "Dental Implants",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200690/ozkan-guner-GxctDhxhbxM-unsplash_ajpxai.jpg",
-    },
-    {
-      title: "Root Canal Therapy",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200746/dental-clinic-interior_nsy34s.jpg",
-    },
-    {
-      title: "Periodontal Care",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200752/dental-equipment_f5wmlm.jpg",
-    },
-    {
-      title: "Cosmetic Dentistry",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200746/cosmetic-dentistry_heezog.jpg",
-    },
-    {
-      title: "Oral Surgery",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200623/hero1_r1cyop.jpg",
-    },
-    {
-      title: "Pediatric Dentistry",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200766/hero5_xw6fmw.jpg",
-    },
-    {
-      title: "Emergency Care",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200623/hero2_wlp9p0.jpg",
-    },
-    {
-      title: "Preventive Care",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200626/hero3_ffwkt3.jpg",
-    },
-    {
-      title: "Advanced Dental Care",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200624/hero4_jcnfea.jpg",
-    },
-    {
-      title: "Comfort & Care",
-      link: "/services",
-      thumbnail: "/waiting-room.jpg",
-    },
-    {
-      title: "Modern Dentistry",
-      link: "/services",
-      thumbnail: "/dental-treatment-room.jpg",
-    },
-    {
-      title: "Expert Treatment",
-      link: "/services",
-      thumbnail: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200638/ozkan-guner-NUPZa4bbi_0-unsplash_dv6imq.jpg",
-    }
-  ];
 
   const faqItems = [
     {
@@ -163,7 +103,6 @@ export default function Home() {
   return (
     <ReactLenis root>
       <div className="min-h-screen w-full relative">
-        {/* Dashed Grid */}
         <div
           className="absolute inset-0 z-0"
           style={{

@@ -420,7 +420,7 @@ const LocationsPage = () => {
           />
 
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Expert dental care at your convenience. Dr. Dheeraj Naik's clinics
+            Expert dental care at your convenience. Dr. Dhiraj Nayak's clinics
             are strategically located across Vadodara to serve you better with
             the same quality care.
           </p>
