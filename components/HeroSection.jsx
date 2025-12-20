@@ -237,7 +237,7 @@ const HeroSection = () => {
               transition={{ delay: 4.2, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/contact">
+              <Link href="https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug" target="_blank" rel="noopener noreferrer">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

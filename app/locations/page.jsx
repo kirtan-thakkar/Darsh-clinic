@@ -806,7 +806,7 @@ const LocationsPage = () => {
               </div>
 
               <div className="pt-6">
-                <Link href="https://www.practo.com/" className="target">
+                <Link href="https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug" target="_blank" rel="noopener noreferrer" className="target">
                   <button className="w-full bg-gray-900 text-white px-6 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
                     <Calendar className="w-5 h-5" />
                     Book Appointment Online

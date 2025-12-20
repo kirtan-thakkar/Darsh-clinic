@@ -178,7 +178,9 @@ const TimelineSection = () => {
                    mt-8 xs:mt-10 sm:mt-12 md:mt-16 lg:mt-20"
         >
           <motion.a
-            href="tel:+919925456519"
+            href="https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="group relative inline-flex items-center justify-center 

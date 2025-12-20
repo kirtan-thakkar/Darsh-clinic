@@ -6,7 +6,7 @@ const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const buttonRef = useRef(null);
-  const whatsappNumber = "+919428305428";
+  const whatsappNumber = "+919925465919";
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(

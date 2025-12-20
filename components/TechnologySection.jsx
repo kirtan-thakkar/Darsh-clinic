@@ -297,7 +297,9 @@ const TechnologySection = () => {
             {/* CTA Button */}
             <div className="pt-6">
               <Link
-                href="/contact"
+                href="https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all duration-300 font-semibold group shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <Sparkles className="w-5 h-5" />

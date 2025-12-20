@@ -282,7 +282,7 @@ const ContactPage = () => {
     }
 
     // Create WhatsApp URL with the clinic's number
-    const whatsappNumber = "919428305428"; // Main clinic WhatsApp number
+    const whatsappNumber = "919925465919"; // Main clinic WhatsApp number
     const whatsappMessage = formatWhatsAppMessage();
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
     
@@ -324,7 +324,7 @@ const ContactPage = () => {
       name: "Karelibaug (Main Clinic)",
       address: "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug",
       city: "VADODARA, Gujarat, INDIA",
-      phone: "+91 99254 56519",
+      phone: "+91 99254 65919",
       email: "darshorthoclinic@gmail.com",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
       isMain: true,
@@ -372,8 +372,8 @@ const ContactPage = () => {
       icon: Phone,
       title: "Call Us Directly",
       description: "Speak with our friendly staff",
-      contact: "+91 99254 56519",
-      action: "tel:+919925456519",
+      contact: "+91 99254 65919",
+      action: "tel:+919925465919",
       color: "blue",
     },
     {
@@ -381,7 +381,7 @@ const ContactPage = () => {
       title: "WhatsApp Chat",
       description: "Instant responses & appointment booking",
       contact: "Chat Now",
-      action: "https://wa.me/919428305428",
+      action: "https://wa.me/919925465919",
       color: "green",
     },
     {
@@ -397,7 +397,7 @@ const ContactPage = () => {
       title: "Online Booking",
       description: "Schedule your appointment",
       contact: "Book Now",
-      action: "https://www.practo.com/",
+      action: "https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug",
       color: "orange",
     },
   ];
