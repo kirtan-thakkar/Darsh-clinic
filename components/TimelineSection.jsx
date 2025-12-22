@@ -44,7 +44,7 @@ const TimelineSection = () => {
       iconColor: "text-purple-600",
     },
     {
-      year: "10,000+",
+      year: "2,000+",
       title: "Happy Smiles",
       description:
         "Trusted by thousands of patients for exceptional dental care and life-changing smile transformations.",
