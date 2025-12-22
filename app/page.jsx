@@ -13,39 +13,32 @@ import StaggeredFAQSection from "../components/ruixen/staggered-faq-section";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Best Dental Clinic in Vadodara - Darsh Dental Clinic | Dr. Dhiraj Nayak",
+  metadataBase: new URL("https://darshdentalclinic.com"),
+
+  title: "Best Dental Clinic in Vadodara | Darsh Dental Clinic",
   description:
-    "Expert dental care by Dr. Dhiraj Nayak at Darsh Dental Clinic with 20+ years experience. Advanced dentistry, painless treatments & comprehensive oral healthcare across Karelibaug, VIP Road & Ajwa Road, Vadodara.",
-  keywords:
-    "darsh dental clinic, dr dhiraj nayak, best dentist vadodara, dental care vadodara, karelibaug dentist, vip road dental clinic, ajwa road dentist",
-  canonicalUrl: "https://darshdentalclinic.com",
-  robots: "index, follow",
-  openGraph: {
-    title: "Darsh Dental Clinic - Premier Dental Care by Dr. Dhiraj Nayak",
-    description:
-      "20+ years of expert dental care by Dr. Dhiraj Nayak across 3 convenient locations in Vadodara. Advanced technology, painless treatments, emergency care available 24/7. Join 2000+ happy patients.",
-    url: "https://darshdentalclinic.com",
-    type: "website",
-    siteName: "Darsh Dental Clinic",
-    images: [
-      {
-        url: "/og-darsh-clinic-homepage.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Darsh Dental Clinic - Dr. Dhiraj Nayak",
-      },
-    ],
+    "Darsh Dental Clinic provides expert dental care in Vadodara with 20+ years of experience. Led by Dr. Dhiraj Nayak, we offer painless treatments and advanced dentistry across Karelibaug, VIP Road, and Ajwa Road.",
+
+  alternates: {
+    canonical: "https://darshdentalclinic.com",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Darsh Dental Clinic - Expert Dental Care",
-    description: "Expert dental services by Dr. Dhiraj Nayak. 2000+ happy patients across Vadodara.",
-    images: ["/og-darsh-clinic-homepage.jpg"],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Darsh Dental Clinic – Trusted Dental Care in Vadodara",
+    description:
+      "20+ years of trusted dental care by Dr. Dhiraj Nayak. Serving Karelibaug, VIP Road & Ajwa Road, Vadodara.",
+    url: "https://darshdentalclinic.com",
+    siteName: "Darsh Dental Clinic",
+    type: "website",
   },
 };
 
 export default function Home() {
-
   const faqItems = [
     {
       id: "treatment-pain",
@@ -164,7 +157,7 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                   priority
                 />
               </div>
@@ -179,7 +172,7 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
             </div>
@@ -187,7 +180,7 @@ export default function Home() {
             {/* Technology Section */}
             <div className="relative bg-white">
               <TechnologySection />
-              
+
               {/* Wave Divider at bottom */}
               <div className="absolute bottom-0 left-0 w-full h-auto">
                 <Image
@@ -196,7 +189,7 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
             </div>
@@ -210,10 +203,10 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
-              
+
               <BeforeAfterTestimonial />
             </div>
 
@@ -226,10 +219,10 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
-              
+
               <TrustSection />
 
               {/* Wave Divider at bottom */}
@@ -240,7 +233,7 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
             </div>
@@ -254,10 +247,10 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
-              
+
               <TimelineSection />
 
               {/* Wave Divider at bottom */}
@@ -268,7 +261,7 @@ export default function Home() {
                   width={1200}
                   height={60}
                   className="w-full h-auto"
-                  style={{ display: 'block' }}
+                  style={{ display: "block" }}
                 />
               </div>
             </div>
@@ -285,14 +278,14 @@ export default function Home() {
             width={1200}
             height={60}
             className="w-full h-auto"
-            style={{ display: 'block' }}
+            style={{ display: "block" }}
           />
         </div>
 
         <StaggeredFAQSection
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about our dental services and treatments"
-          supportText="Can&apos;t find what you&apos;re looking for? Contact our"
+          supportText="Can't find what you're looking for? Contact our"
           supportLink="tel:+919925465919"
           supportLinkText="dental care team"
           faqItems={faqItems}
@@ -307,7 +300,7 @@ export default function Home() {
             width={1200}
             height={60}
             className="w-full h-auto"
-            style={{ display: 'block' }}
+            style={{ display: "block" }}
           />
         </div>
       </div>
@@ -321,10 +314,10 @@ export default function Home() {
             width={1200}
             height={60}
             className="w-full h-auto"
-            style={{ display: 'block' }}
+            style={{ display: "block" }}
           />
         </div>
-        
+
         <Footer />
       </div>
 

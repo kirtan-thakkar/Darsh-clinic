@@ -8,6 +8,5 @@ export default function robots() {
       disallow: ['/private/', '/admin/'],
     },
     sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
-    host: siteMetadata.siteUrl,
   }
 }
