@@ -25,7 +25,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactPage = () => {
@@ -228,17 +227,17 @@ const ContactPage = () => {
   // Handle form submission (convert to WhatsApp message)
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Create WhatsApp message with form details
     const formatWhatsAppMessage = () => {
       let message = "🦷 *New Appointment Request - Darsh Dental Clinic*\n\n";
-      
+
       // Personal Details
       message += "👤 *Patient Details:*\n";
       message += `Name: ${formData.name}\n`;
       message += `Phone: ${formData.phone}\n`;
       message += `Email: ${formData.email}\n\n`;
-      
+
       // Service & Location
       if (formData.service) {
         message += `🩺 *Service Needed:* ${formData.service}\n`;
@@ -246,38 +245,38 @@ const ContactPage = () => {
       if (formData.location) {
         message += `📍 *Preferred Location:* ${formData.location}\n`;
       }
-      
+
       // Appointment Preferences
       if (formData.appointmentDate || formData.appointmentTime) {
         message += "\n📅 *Appointment Preferences:*\n";
         if (formData.appointmentDate) {
           const date = new Date(formData.appointmentDate);
-          message += `Date: ${date.toLocaleDateString('en-IN', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+          message += `Date: ${date.toLocaleDateString("en-IN", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
           })}\n`;
         }
         if (formData.appointmentTime) {
           message += `Time: ${formData.appointmentTime}\n`;
         }
       }
-      
+
       // Message
       if (formData.message) {
         message += `\n💬 *Additional Message:*\n${formData.message}\n`;
       }
-      
+
       message += "\n✅ Please confirm appointment availability.";
       message += "\n\n_Sent via Darsh Dental Clinic Website_";
-      
+
       return encodeURIComponent(message);
     };
 
     // Validate required fields
     if (!formData.name || !formData.phone || !formData.email) {
-      alert('Please fill in all required fields (Name, Phone, Email)');
+      alert("Please fill in all required fields (Name, Phone, Email)");
       return;
     }
 
@@ -285,14 +284,14 @@ const ContactPage = () => {
     const whatsappNumber = "919925465919"; // Main clinic WhatsApp number
     const whatsappMessage = formatWhatsAppMessage();
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-    
+
     // Show success message briefly
     setFormSubmitted(true);
-    
+
     // Open WhatsApp after 1 second
     setTimeout(() => {
-      window.open(whatsappURL, '_blank');
-      
+      window.open(whatsappURL, "_blank");
+
       // Reset form after WhatsApp opens
       setTimeout(() => {
         setFormSubmitted(false);
@@ -312,9 +311,9 @@ const ContactPage = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -322,7 +321,8 @@ const ContactPage = () => {
     {
       id: 1,
       name: "Karelibaug (Main Clinic)",
-      address: "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug",
+      address:
+        "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug",
       city: "VADODARA, Gujarat, INDIA",
       phone: "+91 99254 65919",
       email: "darshorthoclinic@gmail.com",
@@ -333,8 +333,9 @@ const ContactPage = () => {
     {
       id: 2,
       name: "New VIP Road",
-      address: "S.F.-1, Earth Icon, Near Khodiyar Nagar Char Rasta, New V.I.P. Road",
-      city: "VADODARA, Gujarat, INDIA", 
+      address:
+        "S.F.-1, Earth Icon, Near Khodiyar Nagar Char Rasta, New V.I.P. Road",
+      city: "VADODARA, Gujarat, INDIA",
       phone: "+91 99780 88390",
       email: "darshorthoclinic@gmail.com",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
@@ -357,14 +358,14 @@ const ContactPage = () => {
 
   const services = [
     "General Dentistry",
-    "Cosmetic Dentistry", 
+    "Cosmetic Dentistry",
     "Orthodontics",
     "Root Canal Treatment",
     "Dental Implants",
     "Teeth Whitening",
     "Oral Surgery",
     "Pediatric Dentistry",
-    "Emergency Care"
+    "Emergency Care",
   ];
 
   const contactMethods = [
@@ -388,7 +389,7 @@ const ContactPage = () => {
       icon: Mail,
       title: "Email Support",
       description: "Send us detailed inquiries",
-      contact: "Email Us", 
+      contact: "Email Us",
       action: "mailto:darshorthoclinic@gmail.com",
       color: "purple",
     },
@@ -397,7 +398,8 @@ const ContactPage = () => {
       title: "Online Booking",
       description: "Schedule your appointment",
       contact: "Book Now",
-      action: "https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug",
+      action:
+        "https://www.practo.com/vadodara/clinic/darsh-orthodontic-clinic-karelibaug",
       color: "orange",
     },
   ];
@@ -405,589 +407,618 @@ const ContactPage = () => {
   return (
     <ReactLenis root>
       <div className="min-h-screen bg-white">
-      <Navigation />
+        <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white px-4 py-20 overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Floating Orbs */}
-          <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-xl animate-pulse"></div>
-          <div
-            className="absolute top-40 right-32 w-24 h-24 bg-purple-100/40 rounded-full blur-lg animate-bounce"
-            style={{ animationDelay: "2s", animationDuration: "3s" }}
-          ></div>
-          <div
-            className="absolute bottom-32 left-40 w-40 h-40 bg-green-100/20 rounded-full blur-2xl animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
+        {/* Hero Section */}
+        <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white px-4 py-20 overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Floating Orbs */}
+            <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-xl animate-pulse"></div>
+            <div
+              className="absolute top-40 right-32 w-24 h-24 bg-purple-100/40 rounded-full blur-lg animate-bounce"
+              style={{ animationDelay: "2s", animationDuration: "3s" }}
+            ></div>
+            <div
+              className="absolute bottom-32 left-40 w-40 h-40 bg-green-100/20 rounded-full blur-2xl animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
 
-          {/* Medical Icons */}
-          <div className="absolute top-28 left-1/4 text-blue-200/40 animate-float">
-            <Phone className="w-8 h-8" />
-          </div>
-          <div
-            className="absolute top-80 right-1/4 text-purple-200/30 animate-float"
-            style={{ animationDelay: "2s" }}
-          >
-            <Mail className="w-6 h-6" />
-          </div>
-          <div
-            className="absolute bottom-60 left-1/3 text-green-200/40 animate-float"
-            style={{ animationDelay: "4s" }}
-          >
-            <MessageCircle className="w-7 h-7" />
-          </div>
-        </div>
-
-        {/* Interactive Cards */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-40 left-8 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-xs font-medium text-gray-700">
-                Available Now
-              </span>
+            {/* Medical Icons */}
+            <div className="absolute top-28 left-1/4 text-blue-200/40 animate-float">
+              <Phone className="w-8 h-8" />
+            </div>
+            <div
+              className="absolute top-80 right-1/4 text-purple-200/30 animate-float"
+              style={{ animationDelay: "2s" }}
+            >
+              <Mail className="w-6 h-6" />
+            </div>
+            <div
+              className="absolute bottom-60 left-1/3 text-green-200/40 animate-float"
+              style={{ animationDelay: "4s" }}
+            >
+              <MessageCircle className="w-7 h-7" />
             </div>
           </div>
 
-          <div
-            className="absolute top-60 right-12 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer"
-            style={{ animationDelay: "1s" }}
-          >
-            <div className="flex items-center gap-2">
-              <Star className="w-4 h-4 text-yellow-500" />
-              <span className="text-xs font-medium text-gray-700">
-                5-Star Rated
-              </span>
-            </div>
-          </div>
-
-          <div
-            className="absolute bottom-40 left-16 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer"
-            style={{ animationDelay: "2s" }}
-          >
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-blue-500" />
-              <span className="text-xs font-medium text-gray-700">
-                Same Day Appointments
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Wave Divider at Bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
-          <svg 
-            className="absolute bottom-0 w-full h-full"
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none"
-            fill="white"
-            style={{ display: "block" }}
-          >
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"/>
-          </svg>
-        </div>
-
-        <div
-          ref={heroRef}
-          className="w-full max-w-6xl mx-auto text-center relative z-10"
-        >
-          {/* Enhanced Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-200/50 rounded-full px-6 py-3 mb-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group cursor-pointer">
-            <div className="relative">
-              <MessageCircle className="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75"></div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full"></div>
-            </div>
-            <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 uppercase tracking-wider transition-colors duration-300">
-              READY TO HELP YOU
-            </span>
-          </div>
-
-          <TextReveal
-            text="Get In Touch With Us"
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6"
-            duration={0.8}
-            staggerDelay={0.1}
-          />
-
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to transform your smile? Dr. Dhiraj Nayak and our expert team are here to provide personalized dental care. 
-            Contact us today to schedule your consultation.
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-              <Phone className="w-8 h-8 text-blue-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                <CountAnimation number={3} />
+          {/* Interactive Cards */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-40 left-8 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-xs font-medium text-gray-700">
+                  Available Now
+                </span>
               </div>
-              <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
-                Locations
-              </p>
             </div>
 
-            <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-              <Clock className="w-8 h-8 text-green-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                <CountAnimation number={24} suffix="/7" />
+            <div
+              className="absolute top-60 right-12 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer"
+              style={{ animationDelay: "1s" }}
+            >
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-yellow-500" />
+                <span className="text-xs font-medium text-gray-700">
+                  5-Star Rated
+                </span>
               </div>
-              <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
-                Emergency
-              </p>
             </div>
 
-            <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-              <MessageCircle className="w-8 h-8 text-purple-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                <CountAnimation number={15} suffix="min" />
+            <div
+              className="absolute bottom-40 left-16 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer"
+              style={{ animationDelay: "2s" }}
+            >
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-blue-500" />
+                <span className="text-xs font-medium text-gray-700">
+                  Same Day Appointments
+                </span>
               </div>
-              <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
-                Response Time
-              </p>
-            </div>
-
-            <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-              <Star className="w-8 h-8 text-yellow-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
-                <CountAnimation number={5} suffix="★" />
-              </div>
-              <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
-                Rating
-              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Contact Methods Section */}
-      <section className="relative py-20 bg-gray-50">
-        <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
-          <svg 
-            className="absolute bottom-0 w-full h-full"
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none"
-            fill="#f9fafb"
-            style={{ display: "block", transform: "scaleY(-1)" }}
+          {/* Wave Divider at Bottom */}
+          <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
+            <svg
+              className="absolute bottom-0 w-full h-full"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+              fill="white"
+              style={{ display: "block" }}
+            >
+              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+            </svg>
+          </div>
+
+          <div
+            ref={heroRef}
+            className="w-full max-w-6xl mx-auto text-center relative z-10"
           >
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"/>
-          </svg>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 mb-8 shadow-sm">
-              <Send className="w-5 h-5 text-gray-600" />
-              <span className="text-sm font-medium text-gray-700 uppercase tracking-wider">
-                MULTIPLE WAYS TO REACH US
+            {/* Enhanced Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-gray-200/50 rounded-full px-6 py-3 mb-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group cursor-pointer">
+              <div className="relative">
+                <MessageCircle className="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 uppercase tracking-wider transition-colors duration-300">
+                READY TO HELP YOU
               </span>
             </div>
 
             <TextReveal
-              text="Choose Your Preferred Contact Method"
-              className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
-              duration={0.6}
+              text="Get In Touch With Us"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6"
+              duration={0.8}
+              staggerDelay={0.1}
             />
 
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're here to help! Choose the most convenient way to connect with our dental team 
-              and get the care you need.
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to transform your smile? Dr. Dhiraj Nayak and our expert
+              team are here to provide personalized dental care. Contact us
+              today to schedule your consultation.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactMethods.map((method, index) => {
-              const Icon = method.icon;
-              const colorClasses = {
-                blue: "text-blue-500 bg-blue-50 border-blue-200 hover:bg-blue-100",
-                green: "text-green-500 bg-green-50 border-green-200 hover:bg-green-100", 
-                purple: "text-purple-500 bg-purple-50 border-purple-200 hover:bg-purple-100",
-                orange: "text-orange-500 bg-orange-50 border-orange-200 hover:bg-orange-100",
-              };
-
-              return (
-                <div
-                  key={index}
-                  ref={(el) => (contactCardsRef.current[index] = el)}
-                  className="group"
-                >
-                  <CardSpotlight className="h-full p-6 bg-white text-center hover-lift">
-                    <div className={`w-16 h-16 ${colorClasses[method.color]} rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border-2`}>
-                      <Icon className="w-8 h-8" />
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {method.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6">
-                      {method.description}
-                    </p>
-                    
-                    <a
-                      href={method.action}
-                      target={method.action.startsWith('http') ? '_blank' : '_self'}
-                      rel={method.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                      className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors group-hover:scale-105 font-medium"
-                    >
-                      {method.contact}
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </CardSpotlight>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
+                <Phone className="w-8 h-8 text-blue-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  <CountAnimation number={3} />
                 </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Wave at bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
-          <svg 
-            className="absolute bottom-0 w-full h-full"
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none"
-            fill="white"
-            style={{ display: "block" }}
-          >
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"/>
-          </svg>
-        </div>
-      </section>
-
-      {/* Contact Form & Locations Section */}
-      <section className="relative py-20 bg-white">
-        {/* Wave at top */}
-        <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
-          <svg 
-            className="absolute bottom-0 w-full h-full"
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none"
-            fill="white"
-            style={{ display: "block", transform: "scaleY(-1)" }}
-          >
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"/>
-          </svg>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Contact Form */}
-            <div ref={formRef}>
-              <div className="mb-8">
-                <TextReveal
-                  text="Send Us a Message"
-                  className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-                  duration={0.6}
-                />
-                <p className="text-lg text-gray-600">
-                  Fill out the form below and we'll get back to you within 24 hours. 
-                  For urgent matters, please call us directly.
+                <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
+                  Locations
                 </p>
               </div>
 
-              {formSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <MessageCircle className="w-16 h-16 text-green-500" />
-                    <ArrowRight className="w-8 h-8 text-green-500 animate-bounce" />
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                      <span className="text-2xl">💬</span>
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-green-900 mb-2">
-                    Redirecting to WhatsApp...
-                  </h3>
-                  <p className="text-green-700">
-                    Your appointment request is being prepared. You'll be redirected to WhatsApp to send your details directly to our clinic.
-                  </p>
-                  <div className="mt-4 flex items-center justify-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                  </div>
+              <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
+                <Clock className="w-8 h-8 text-green-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                  <CountAnimation number={24} suffix="/7" />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="+91 XXXXX XXXXX"
-                      />
-                    </div>
-                  </div>
+                <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
+                  Emergency
+                </p>
+              </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
+              <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
+                <MessageCircle className="w-8 h-8 text-purple-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                  <CountAnimation number={15} suffix="min" />
+                </div>
+                <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
+                  Response Time
+                </p>
+              </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Service Needed
-                      </label>
-                      <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      >
-                        <option value="">Select a service</option>
-                        {services.map((service, index) => (
-                          <option key={index} value={service}>
-                            {service}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Preferred Location
-                      </label>
-                      <select
-                        name="location"
-                        value={formData.location}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      >
-                        <option value="">Select a location</option>
-                        {locations.map((location) => (
-                          <option key={location.id} value={location.name}>
-                            {location.name}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
+              <div className="group text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50 hover:bg-white/80 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
+                <Star className="w-8 h-8 text-yellow-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                  <CountAnimation number={5} suffix="★" />
+                </div>
+                <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
+                  Rating
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Preferred Date
-                      </label>
-                      <input
-                        type="date"
-                        name="appointmentDate"
-                        value={formData.appointmentDate}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Preferred Time
-                      </label>
-                      <select
-                        name="appointmentTime"
-                        value={formData.appointmentTime}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      >
-                        <option value="">Select time</option>
-                        <option value="9:30 AM">9:30 AM</option>
-                        <option value="10:00 AM">10:00 AM</option>
-                        <option value="10:30 AM">10:30 AM</option>
-                        <option value="11:00 AM">11:00 AM</option>
-                        <option value="11:30 AM">11:30 AM</option>
-                        <option value="12:00 PM">12:00 PM</option>
-                        <option value="12:30 PM">12:30 PM</option>
-                        <option value="4:00 PM">4:00 PM</option>
-                        <option value="4:30 PM">4:30 PM</option>
-                        <option value="5:00 PM">5:00 PM</option>
-                        <option value="5:30 PM">5:30 PM</option>
-                        <option value="6:00 PM">6:00 PM</option>
-                        <option value="6:30 PM">6:30 PM</option>
-                        <option value="7:00 PM">7:00 PM</option>
-                        <option value="7:30 PM">7:30 PM</option>
-                      </select>
-                    </div>
-                  </div>
+        {/* Contact Methods Section */}
+        <section className="relative py-20 bg-gray-50">
+          <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
+            <svg
+              className="absolute bottom-0 w-full h-full"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+              fill="#f9fafb"
+              style={{ display: "block", transform: "scaleY(-1)" }}
+            >
+              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+            </svg>
+          </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                      placeholder="Tell us about your dental concerns or questions..."
-                    ></textarea>
-                  </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 mb-8 shadow-sm">
+                <Send className="w-5 h-5 text-gray-600" />
+                <span className="text-sm font-medium text-gray-700 uppercase tracking-wider">
+                  MULTIPLE WAYS TO REACH US
+                </span>
+              </div>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 font-semibold group"
-                  >
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    Send Message
-                  </button>
+              <TextReveal
+                text="Choose Your Preferred Contact Method"
+                className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+                duration={0.6}
+              />
 
-                  <p className="text-sm text-gray-500 text-center">
-                    * Required fields. We respect your privacy and will never share your information.
-                  </p>
-                </form>
-              )}
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We're here to help! Choose the most convenient way to connect
+                with our dental team and get the care you need.
+              </p>
             </div>
 
-            {/* Locations Info */}
-            <div>
-              <div className="mb-8">
-                <TextReveal
-                  text="Visit Our Clinics"
-                  className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-                  duration={0.6}
-                />
-                <p className="text-lg text-gray-600">
-                  Choose the most convenient location for your dental care. 
-                  All our clinics offer the same high-quality services.
-                </p>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {contactMethods.map((method, index) => {
+                const Icon = method.icon;
+                const colorClasses = {
+                  blue: "text-blue-500 bg-blue-50 border-blue-200 hover:bg-blue-100",
+                  green:
+                    "text-green-500 bg-green-50 border-green-200 hover:bg-green-100",
+                  purple:
+                    "text-purple-500 bg-purple-50 border-purple-200 hover:bg-purple-100",
+                  orange:
+                    "text-orange-500 bg-orange-50 border-orange-200 hover:bg-orange-100",
+                };
 
-              <div className="space-y-6">
-                {locations.map((location, index) => (
+                return (
                   <div
-                    key={location.id}
-                    ref={(el) => (locationsRef.current[index] = el)}
-                    className={`border-2 rounded-lg p-6 transition-all duration-300 cursor-pointer ${
-                      activeLocation === index
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                    onClick={() => setActiveLocation(index)}
+                    key={index}
+                    ref={(el) => (contactCardsRef.current[index] = el)}
+                    className="group"
                   >
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                          {location.name}
-                          {location.isMain && (
-                            <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                              Main
-                            </span>
-                          )}
-                        </h3>
-                        <p className="text-sm text-gray-500">{location.landmark}</p>
+                    <CardSpotlight className="h-full p-6 bg-white text-center hover-lift">
+                      <div
+                        className={`w-16 h-16 ${
+                          colorClasses[method.color]
+                        } rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border-2`}
+                      >
+                        <Icon className="w-8 h-8" />
                       </div>
-                      <Building className={`w-6 h-6 ${
-                        activeLocation === index ? 'text-blue-500' : 'text-gray-400'
-                      }`} />
+
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {method.title}
+                      </h3>
+
+                      <p className="text-gray-600 mb-6">{method.description}</p>
+
+                      <a
+                        href={method.action}
+                        target={
+                          method.action.startsWith("http") ? "_blank" : "_self"
+                        }
+                        rel={
+                          method.action.startsWith("http")
+                            ? "noopener noreferrer"
+                            : ""
+                        }
+                        className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors group-hover:scale-105 font-medium"
+                      >
+                        {method.contact}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </a>
+                    </CardSpotlight>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Wave at bottom */}
+          <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
+            <svg
+              className="absolute bottom-0 w-full h-full"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+              fill="white"
+              style={{ display: "block" }}
+            >
+              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+            </svg>
+          </div>
+        </section>
+
+        {/* Contact Form & Locations Section */}
+        <section className="relative py-20 bg-white">
+          {/* Wave at top */}
+          <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
+            <svg
+              className="absolute bottom-0 w-full h-full"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+              fill="white"
+              style={{ display: "block", transform: "scaleY(-1)" }}
+            >
+              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+            </svg>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              {/* Contact Form */}
+              <div ref={formRef}>
+                <div className="mb-8">
+                  <TextReveal
+                    text="Send Us a Message"
+                    className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                    duration={0.6}
+                  />
+                  <p className="text-lg text-gray-600">
+                    Fill out the form below and we'll get back to you within 24
+                    hours. For urgent matters, please call us directly.
+                  </p>
+                </div>
+
+                {formSubmitted ? (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                      <MessageCircle className="w-16 h-16 text-green-500" />
+                      <ArrowRight className="w-8 h-8 text-green-500 animate-bounce" />
+                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">💬</span>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-green-900 mb-2">
+                      Redirecting to WhatsApp...
+                    </h3>
+                    <p className="text-green-700">
+                      Your appointment request is being prepared. You'll be
+                      redirected to WhatsApp to send your details directly to
+                      our clinic.
+                    </p>
+                    <div className="mt-4 flex items-center justify-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce"></div>
+                      <div
+                        className="w-2 h-2 bg-green-500 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.1s" }}
+                      ></div>
+                      <div
+                        className="w-2 h-2 bg-green-500 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          placeholder="Enter your full name"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Phone Number *
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          placeholder="+91 XXXXX XXXXX"
+                        />
+                      </div>
                     </div>
 
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Service Needed
+                        </label>
+                        <select
+                          name="service"
+                          value={formData.service}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        >
+                          <option value="">Select a service</option>
+                          {services.map((service, index) => (
+                            <option key={index} value={service}>
+                              {service}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Preferred Location
+                        </label>
+                        <select
+                          name="location"
+                          value={formData.location}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        >
+                          <option value="">Select a location</option>
+                          {locations.map((location) => (
+                            <option key={location.id} value={location.name}>
+                              {location.name}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Preferred Date
+                        </label>
+                        <input
+                          type="date"
+                          name="appointmentDate"
+                          value={formData.appointmentDate}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Preferred Time
+                        </label>
+                        <select
+                          name="appointmentTime"
+                          value={formData.appointmentTime}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        >
+                          <option value="">Select time</option>
+                          <option value="9:30 AM">9:30 AM</option>
+                          <option value="10:00 AM">10:00 AM</option>
+                          <option value="10:30 AM">10:30 AM</option>
+                          <option value="11:00 AM">11:00 AM</option>
+                          <option value="11:30 AM">11:30 AM</option>
+                          <option value="12:00 PM">12:00 PM</option>
+                          <option value="12:30 PM">12:30 PM</option>
+                          <option value="4:00 PM">4:00 PM</option>
+                          <option value="4:30 PM">4:30 PM</option>
+                          <option value="5:00 PM">5:00 PM</option>
+                          <option value="5:30 PM">5:30 PM</option>
+                          <option value="6:00 PM">6:00 PM</option>
+                          <option value="6:30 PM">6:30 PM</option>
+                          <option value="7:00 PM">7:00 PM</option>
+                          <option value="7:30 PM">7:30 PM</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        rows={5}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                        placeholder="Tell us about your dental concerns or questions..."
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 font-semibold group"
+                    >
+                      <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      Send Message
+                    </button>
+
+                    <p className="text-sm text-gray-500 text-center">
+                      * Required fields. We respect your privacy and will never
+                      share your information.
+                    </p>
+                  </form>
+                )}
+              </div>
+
+              {/* Locations Info */}
+              <div>
+                <div className="mb-8">
+                  <TextReveal
+                    text="Visit Our Clinics"
+                    className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                    duration={0.6}
+                  />
+                  <p className="text-lg text-gray-600">
+                    Choose the most convenient location for your dental care.
+                    All our clinics offer the same high-quality services.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {locations.map((location, index) => (
+                    <div
+                      key={location.id}
+                      ref={(el) => (locationsRef.current[index] = el)}
+                      className={`border-2 rounded-lg p-6 transition-all duration-300 cursor-pointer ${
+                        activeLocation === index
+                          ? "border-blue-500 bg-blue-50"
+                          : "border-gray-200 hover:border-gray-300"
+                      }`}
+                      onClick={() => setActiveLocation(index)}
+                    >
+                      <div className="flex items-start justify-between mb-4">
                         <div>
-                          <p className="text-sm text-gray-700">{location.address}</p>
-                          <p className="text-sm text-gray-500">{location.city}</p>
+                          <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                            {location.name}
+                            {location.isMain && (
+                              <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
+                                Main
+                              </span>
+                            )}
+                          </h3>
+                          <p className="text-sm text-gray-500">
+                            {location.landmark}
+                          </p>
                         </div>
+                        <Building
+                          className={`w-6 h-6 ${
+                            activeLocation === index
+                              ? "text-blue-500"
+                              : "text-gray-400"
+                          }`}
+                        />
                       </div>
 
-                      <div className="flex items-center gap-3">
-                        <Phone className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-700">{location.phone}</span>
-                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3">
+                          <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="text-sm text-gray-700">
+                              {location.address}
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              {location.city}
+                            </p>
+                          </div>
+                        </div>
 
-                      <div className="flex items-center gap-3">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-700">{location.timings}</span>
-                      </div>
-
-                      {location.emergencyPhone && (
                         <div className="flex items-center gap-3">
-                          <AlertCircle className="w-4 h-4 text-red-500" />
+                          <Phone className="w-4 h-4 text-gray-400" />
                           <span className="text-sm text-gray-700">
-                            Emergency: {location.emergencyPhone}
+                            {location.phone}
                           </span>
                         </div>
-                      )}
-                    </div>
 
-                    <div className="grid grid-cols-2 gap-3 mt-6">
-                      <a
-                        href={`tel:${location.phone}`}
-                        className="flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded text-gray-700 hover:border-gray-400 transition-colors text-sm"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Phone className="w-4 h-4" />
-                        Call
-                      </a>
-                      <a
-                        href={`mailto:${location.email}`}
-                        className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800 transition-colors text-sm"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Mail className="w-4 h-4" />
-                        Email
-                      </a>
+                        <div className="flex items-center gap-3">
+                          <Clock className="w-4 h-4 text-gray-400" />
+                          <span className="text-sm text-gray-700">
+                            {location.timings}
+                          </span>
+                        </div>
+
+                        {location.emergencyPhone && (
+                          <div className="flex items-center gap-3">
+                            <AlertCircle className="w-4 h-4 text-red-500" />
+                            <span className="text-sm text-gray-700">
+                              Emergency: {location.emergencyPhone}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3 mt-6">
+                        <a
+                          href={`tel:${location.phone}`}
+                          className="flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded text-gray-700 hover:border-gray-400 transition-colors text-sm"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Phone className="w-4 h-4" />
+                          Call
+                        </a>
+                        <a
+                          href={`mailto:${location.email}`}
+                          className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800 transition-colors text-sm"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Mail className="w-4 h-4" />
+                          Email
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Wave at bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
-          <svg 
-            className="absolute bottom-0 w-full h-full"
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none"
-            fill="#f9fafb"
-            style={{ display: "block" }}
-          >
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"/>
-          </svg>
-        </div>
-      </section>
-
-      {/* Why We Stand Out Timeline Section */}
-      <TimelineSection />
-
-      {/* Premium Emergency Contact Section */}
-      
-
-      <Footer />
-      <WhatsAppButton />
+          {/* Wave at bottom */}
+          <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
+            <svg
+              className="absolute bottom-0 w-full h-full"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+              fill="#f9fafb"
+              style={{ display: "block" }}
+            >
+              <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" />
+            </svg>
+          </div>
+        </section>
+        <TimelineSection />
+        <Footer />
+        <WhatsAppButton />
       </div>
     </ReactLenis>
   );

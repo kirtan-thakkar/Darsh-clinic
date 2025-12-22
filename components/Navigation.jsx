@@ -1,13 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { businessInfo } from "../app/constants/index.js";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
-// Logo path reference: /logo.svg
-
 const Navbar = () => {
   const navRef = useRef(null);
   const linksRef = useRef([]);
@@ -19,8 +15,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
   const router = useRouter();
-
-  // Navigation sections for Darsh Dental Clinic
   const navSections = ["HOME", "SERVICES", "ABOUT", "LOCATIONS", "CONTACT"];
 
   useGSAP(() => {
@@ -133,7 +127,6 @@ const Navbar = () => {
         break;
       
       default:
-        // Fallback to home
         router.push("/");
         break;
     }
@@ -141,7 +134,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Logo positioned outside the sliding navigation */}
       <div className="fixed top-4 left-4 z-50">
         <Image 
           src="/logo.svg" 
