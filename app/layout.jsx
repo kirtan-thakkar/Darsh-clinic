@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
                 "opens": "09:30",
                 "closes": "20:00"
               },
-              "hasMap": `https://maps.google.com/?q=${encodeURIComponent(businessInfo.locations[0].address)}`,
+              "hasMap": "https://maps.google.com/?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
               "priceRange": "₹₹"
             }),
           }}

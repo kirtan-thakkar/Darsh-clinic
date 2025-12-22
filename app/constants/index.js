@@ -56,7 +56,7 @@ export const businessInfo = {
       address: "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug, Vadodara - 390018",
       shortAddress: "Chitra Complex, Karelibaug, Vadodara",
       phone: "+91 99254 56519",
-      coordinates: { lat: 22.3039, lng: 73.1812 },
+      mapUrl: "https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
       landmark: "Near Muktanand Circle, Above Prime Bank"
     },
     {
@@ -65,7 +65,7 @@ export const businessInfo = {
       address: "S.F-1, Earth Icon, Near Khodiyar Nagar Char Rasta, New V.I.P. Road, Vadodara - 390022",
       shortAddress: "Earth Icon, New VIP Road, Vadodara",
       phone: "+91 99780 88390",
-      coordinates: { lat: 22.3073, lng: 73.1525 },
+      mapUrl: "https://maps.google.com/maps?q=Earth+Icon+New+VIP+Road+Vadodara",
       landmark: "Near Khodiyar Nagar Char Rasta"
     },
     {
@@ -74,7 +74,7 @@ export const businessInfo = {
       address: "First Floor, Saujanya Trilake, Opp. Kamlanagar Lake, Ajwa Road, Vadodara - 390019",
       shortAddress: "Saujanya Trilake, Ajwa Road, Vadodara",
       phone: "+91 99746 13749",
-      coordinates: { lat: 22.2587, lng: 73.1434 },
+      mapUrl: "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
       landmark: "Opposite Kamlanagar Lake"
     }
   ],
@@ -227,7 +227,7 @@ export const structuredData = {
   "telephone": "+91 99254 56519",
   "email": "info@darshdentalclinic.com",
   "foundingDate": "2008",
-  "hasMap": "https://maps.google.com/?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
+  "hasMap": "https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
   "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "UPI"],
   "currenciesAccepted": "INR",
   "openingHours": "Mo-Sa 09:30-13:00,16:00-20:00",
@@ -239,11 +239,6 @@ export const structuredData = {
     "addressRegion": "Gujarat",
     "postalCode": "390018",
     "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 22.3039,
-    "longitude": 73.1812
   },
   "medicalSpecialty": [
     "General Dentistry", "Cosmetic Dentistry", "Orthodontics", 

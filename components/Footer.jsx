@@ -202,14 +202,14 @@ const Footer = () => {
       address: "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug, VADODARA, Gujarat, INDIA",
       phone: "+91 992 5465919",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
-      mapUrl: "https://maps.google.com/?q=22.321083,73.197296",
+      mapUrl: "https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
     },
     {
       name: "New VIP Road, Khodiyar Nagar", 
       address: "S.F.-1, Earth Icon, Near Khodiyar Nagar Char Rasta, New V.I.P. Road, New Karelibaug, VADODARA, Gujarat, INDIA",
       phone: "+91 997 8083930",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
-      mapUrl: "https://maps.google.com/?q=22.2734,73.1953",
+      mapUrl: "https://maps.google.com/maps?q=Earth+Icon+New+VIP+Road+Vadodara",
     },
     {
       name: "Ajwa Road, Kamla Nagar",
@@ -217,7 +217,7 @@ const Footer = () => {
       phone: "+91 997 4613749",
       emergencyPhone: "9099246833",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
-      mapUrl: "https://maps.google.com/?q=22.3168,73.1650",
+      mapUrl: "https://www.google.com/maps/dir//First+Floor,+Saujanya+Trilake,+Ajwa+Rd,+opp.+Kamlanagar+Lake,+Vadodara,+Gujarat+390019/@22.2940754,73.2223774,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fd1bc2596686b:0x23be46b9495e9ea5!2m2!1d73.2987071!2d22.3514393?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D",
     },
   ];
 
@@ -495,7 +495,7 @@ const Footer = () => {
 
               {/* Enhanced Get Directions Button - Fully responsive */}
               <a
-                href="https://maps.google.com/?q=22.321083,73.197296"
+                href="https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center 
