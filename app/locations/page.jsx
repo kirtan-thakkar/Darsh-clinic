@@ -200,7 +200,7 @@ const LocationsPage = () => {
       city: "VADODARA, Gujarat, INDIA",
       phone: "+91 992 5465919",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
-      mapUrl: "https://www.google.com/maps/dir//Chitra+Complex,+302,+Muktanand+Cir,+Kalyan+Nagar,+Karelibagh,+Vadodara,+Gujarat+390018/@22.3125031,73.1943257,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fcf9c4902db2d:0xe62136ad439f11e!2m2!1d73.1973248!2d22.3211636?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D",
+      mapUrl: "https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
       isMain: true,
       features: [
         "Main Clinic",
@@ -219,7 +219,7 @@ const LocationsPage = () => {
       city: "VADODARA, Gujarat, INDIA",
       phone: "+91 997 8083930",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
-      mapUrl: "https://www.google.com/maps/dir//Earth+Icon,+Khodiyar+Nagar,+New+VIP+Road,+Vadodara,+Gujarat/@22.2734,73.1953,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fcf5c0c0e0e0e:0x123456789abcdef0!2m2!1d73.1953!2d22.2734?entry=ttu",
+      mapUrl: "https://maps.google.com/maps?q=Earth+Icon+New+VIP+Road+Vadodara",
       isMain: false,
       features: [
         "Modern Equipment",
@@ -238,7 +238,7 @@ const LocationsPage = () => {
       phone: "+91 997 4613749",
       emergencyPhone: "9099246833",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
-      mapUrl: "https://www.google.com/maps/dir//Saujanya+Trilake,+Ajwa+Road,+Kamlanagar,+Vadodara,+Gujarat/@22.3168,73.1650,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fcf5c0c0e0e0e:0x987654321fedcba0!2m2!1d73.1650!2d22.3168?entry=ttu",
+      mapUrl: "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
       isMain: false,
       features: [
         "Lake View",

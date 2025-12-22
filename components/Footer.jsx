@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Award, Shield, Users, HeartHandshake, AlertCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram, Youtube, Linkedin, Award, Shield, Users, HeartHandshake, AlertCircle } from "lucide-react";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -217,7 +217,7 @@ const Footer = () => {
       phone: "+91 997 4613749",
       emergencyPhone: "9099246833",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
-      mapUrl: "https://www.google.com/maps/dir//First+Floor,+Saujanya+Trilake,+Ajwa+Rd,+opp.+Kamlanagar+Lake,+Vadodara,+Gujarat+390019/@22.2940754,73.2223774,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395fd1bc2596686b:0x23be46b9495e9ea5!2m2!1d73.2987071!2d22.3514393?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D",
+      mapUrl: "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
     },
   ];
 
@@ -231,7 +231,7 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className="relative bg-black text-white hardware-acceleration">
 
-      <div className="relative z-20 container-fluid max-w-7xl 
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl 
                      pt-16 xs:pt-18 sm:pt-20 md:pt-24 
                      pb-12 xs:pb-14 sm:pb-16">
         {/* Enhanced Main Content - Responsive Grid */}
@@ -369,22 +369,9 @@ const Footer = () => {
               </h4>
               <div ref={socialRef} className="flex gap-3 xs:gap-4">
                 <a
-                  href="#"
-                  className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 
-                           border border-gray-800 hover:border-gray-700 
-                           rounded xs:rounded-lg 
-                           flex items-center justify-center 
-                           transition-all duration-300 group
-                           hardware-acceleration touch-scale
-                           hover:scale-110 hover:bg-blue-600/20
-                           active:scale-95"
-                >
-                  <Facebook className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
-                                     text-gray-400 group-hover:text-blue-400 
-                                     transition-colors duration-300" />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/darsh_dental_hospital?igsh=MTB4MTU1bnZoaXZ5Mg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 
                            border border-gray-800 hover:border-gray-700 
                            rounded xs:rounded-lg 
@@ -397,6 +384,23 @@ const Footer = () => {
                   <Instagram className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
                                       text-gray-400 group-hover:text-pink-400 
                                       transition-colors duration-300" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@DhirajNayak-nd3fb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 
+                           border border-gray-800 hover:border-gray-700 
+                           rounded xs:rounded-lg 
+                           flex items-center justify-center 
+                           transition-all duration-300 group
+                           hardware-acceleration touch-scale
+                           hover:scale-110 hover:bg-red-600/20
+                           active:scale-95"
+                >
+                  <Youtube className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
+                                    text-gray-400 group-hover:text-red-400 
+                                    transition-colors duration-300" />
                 </a>
                 <a
                   href="#"
