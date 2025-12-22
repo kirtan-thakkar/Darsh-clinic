@@ -2,7 +2,20 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Phone, Mail, MapPin, Clock, Instagram, Youtube, Linkedin, Award, Shield, Users, HeartHandshake, AlertCircle } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Instagram,
+  Youtube,
+  Linkedin,
+  Award,
+  Shield,
+  Users,
+  HeartHandshake,
+  AlertCircle,
+} from "lucide-react";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,21 +39,27 @@ const Footer = () => {
         const text = heading.textContent;
         heading.innerHTML = text
           .split("")
-          .map((char) => `<span class="inline-block">${char === " " ? "&nbsp;" : char}</span>`)
+          .map(
+            (char) =>
+              `<span class="inline-block">${
+                char === " " ? "&nbsp;" : char
+              }</span>`
+          )
           .join("");
 
-        gsap.fromTo(heading.children, 
+        gsap.fromTo(
+          heading.children,
           {
             y: 60,
             opacity: 0,
             rotationX: -90,
-            transformOrigin: "bottom center"
+            transformOrigin: "bottom center",
           },
           {
             scrollTrigger: {
               trigger: headingRef.current,
               start: "top 80%",
-              toggleActions: "play none none reverse"
+              toggleActions: "play none none reverse",
             },
             y: 0,
             opacity: 1,
@@ -48,40 +67,44 @@ const Footer = () => {
             stagger: 0.03,
             duration: 0.8,
             ease: "back.out(1.5)",
-          });
+          }
+        );
       }
 
       // Clinic info fade-up animation
-      gsap.fromTo(clinicInfoRef.current,
+      gsap.fromTo(
+        clinicInfoRef.current,
         {
           y: 40,
-          opacity: 0
+          opacity: 0,
         },
         {
           scrollTrigger: {
             trigger: clinicInfoRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           y: 0,
           opacity: 1,
           duration: 1,
           ease: "power3.out",
-          delay: 0.2
-        });
+          delay: 0.2,
+        }
+      );
 
       // Contact cards enhanced stagger fade-up
-      gsap.fromTo(contactCardsRef.current,
+      gsap.fromTo(
+        contactCardsRef.current,
         {
           y: 60,
           opacity: 0,
-          scale: 0.9
+          scale: 0.9,
         },
         {
           scrollTrigger: {
             trigger: contactCardsRef.current[0],
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           y: 0,
           opacity: 1,
@@ -89,59 +112,65 @@ const Footer = () => {
           stagger: 0.15,
           duration: 0.8,
           ease: "power3.out",
-        });
+        }
+      );
 
       // Services section fade-up
-      gsap.fromTo(servicesRef.current,
+      gsap.fromTo(
+        servicesRef.current,
         {
           y: 50,
-          opacity: 0
+          opacity: 0,
         },
         {
           scrollTrigger: {
             trigger: servicesRef.current[0],
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           y: 0,
           opacity: 1,
           stagger: 0.1,
           duration: 0.6,
           ease: "power2.out",
-        });
+        }
+      );
 
       // Map container enhanced animation
-      gsap.fromTo(mapRef.current,
+      gsap.fromTo(
+        mapRef.current,
         {
           scale: 0.95,
           opacity: 0,
-          y: 30
+          y: 30,
         },
         {
           scrollTrigger: {
             trigger: mapRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           scale: 1,
           opacity: 1,
           y: 0,
           duration: 1.2,
           ease: "power3.out",
-        });
+        }
+      );
 
       // Location cards slide-up animation
-      gsap.fromTo(locationsRef.current,
+      gsap.fromTo(
+        locationsRef.current,
         {
           x: -40,
           opacity: 0,
-          y: 20
+          y: 20,
         },
         {
           scrollTrigger: {
             trigger: locationsRef.current[0],
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           x: 0,
           opacity: 1,
@@ -149,20 +178,22 @@ const Footer = () => {
           stagger: 0.12,
           duration: 0.7,
           ease: "power2.out",
-        });
+        }
+      );
 
       // Social icons bounce animation
-      gsap.fromTo(socialRef.current?.children || [],
+      gsap.fromTo(
+        socialRef.current?.children || [],
         {
           scale: 0,
           opacity: 0,
-          rotation: -180
+          rotation: -180,
         },
         {
           scrollTrigger: {
             trigger: socialRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           scale: 1,
           opacity: 1,
@@ -170,27 +201,29 @@ const Footer = () => {
           stagger: 0.1,
           duration: 0.6,
           ease: "back.out(2)",
-        });
+        }
+      );
 
       // Bottom section fade-up
-      gsap.fromTo(bottomRef.current,
+      gsap.fromTo(
+        bottomRef.current,
         {
           y: 30,
-          opacity: 0
+          opacity: 0,
         },
         {
           scrollTrigger: {
             trigger: bottomRef.current,
             start: "top 90%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           y: 0,
           opacity: 1,
           duration: 0.8,
           ease: "power2.out",
-          delay: 0.2
-        });
-
+          delay: 0.2,
+        }
+      );
     }, footerRef);
 
     return () => ctx.revert();
@@ -199,25 +232,30 @@ const Footer = () => {
   const locations = [
     {
       name: "Karelibaug, Muktanand",
-      address: "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug, VADODARA, Gujarat, INDIA",
+      address:
+        "302, Chitra Complex, Above Prime Bank, Muktanand Tran Rasta, Karelibaug, VADODARA, Gujarat, INDIA",
       phone: "+91 992 5465919",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
-      mapUrl: "https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
+      mapUrl:
+        "https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara",
     },
     {
-      name: "New VIP Road, Khodiyar Nagar", 
-      address: "S.F.-1, Earth Icon, Near Khodiyar Nagar Char Rasta, New V.I.P. Road, New Karelibaug, VADODARA, Gujarat, INDIA",
+      name: "New VIP Road, Khodiyar Nagar",
+      address:
+        "S.F.-1, Earth Icon, Near Khodiyar Nagar Char Rasta, New V.I.P. Road, New Karelibaug, VADODARA, Gujarat, INDIA",
       phone: "+91 997 8083930",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
       mapUrl: "https://maps.google.com/maps?q=Earth+Icon+New+VIP+Road+Vadodara",
     },
     {
       name: "Ajwa Road, Kamla Nagar",
-      address: "First Floor, Saujanya Trilake, Opp. Kamlanagar Lake, Ajwa Road, VADODARA",
+      address:
+        "First Floor, Saujanya Trilake, Opp. Kamlanagar Lake, Ajwa Road, VADODARA",
       phone: "+91 997 4613749",
       emergencyPhone: "9099246835",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
-      mapUrl: "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
+      mapUrl:
+        "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
     },
   ];
 
@@ -229,15 +267,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer ref={footerRef} className="relative bg-black text-white hardware-acceleration">
-
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl 
+    <footer
+      ref={footerRef}
+      className="relative bg-black text-white hardware-acceleration"
+    >
+      <div
+        className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl 
                      pt-16 xs:pt-18 sm:pt-20 md:pt-24 
-                     pb-12 xs:pb-14 sm:pb-16">
+                     pb-12 xs:pb-14 sm:pb-16"
+      >
         {/* Enhanced Main Content - Responsive Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 
+        <div
+          className="grid grid-cols-1 lg:grid-cols-12 
                        gap-6 xs:gap-8 lg:gap-12 
-                       mb-12 xs:mb-14 sm:mb-16">
+                       mb-12 xs:mb-14 sm:mb-16"
+        >
           {/* Enhanced Left Section - Responsive columns */}
           <div className="lg:col-span-5 space-y-6 xs:space-y-8">
             {/* Enhanced Animated Heading - Fully responsive */}
@@ -246,23 +290,25 @@ const Footer = () => {
                 ref={headingRef}
                 className="text-2xl  sm:text-3xl md:text-4xl lg:text-5xl font-bold font-manrope mb-4 xs:mb-5 sm:mb-6 text-white leading-tight"
               >
-              Darsh Orthodontic Clinic
-              </h3> 
+                Darsh Orthodontic Clinic
+              </h3>
               <p
                 ref={clinicInfoRef}
                 className="text-sm xs:text-base sm:text-lg md:text-xl 
                          text-gray-300 leading-relaxed"
               >
-                Expert dental care by Dr. Dhiraj Nayak with 20+ years of experience.
-                State-of-the-art technology and compassionate service across 3 convenient
-                locations in Vadodara.
+                Expert dental care by Dr. Dhiraj Nayak with 20+ years of
+                experience. State-of-the-art technology and compassionate
+                service across 3 convenient locations in Vadodara.
               </p>
             </div>
 
             {/* Enhanced Quick Services - Responsive grid */}
             <div>
-              <h4 className="text-lg xs:text-xl sm:text-2xl font-semibold font-manrope
-                           mb-4 xs:mb-5 sm:mb-6 text-white">
+              <h4
+                className="text-lg xs:text-xl sm:text-2xl font-semibold font-manrope
+                           mb-4 xs:mb-5 sm:mb-6 text-white"
+              >
                 Popular Services
               </h4>
               <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 xs:gap-4">
@@ -299,13 +345,17 @@ const Footer = () => {
                          hardware-acceleration touch-scale hover:scale-105"
               >
                 <div className="flex items-center gap-3 xs:gap-4">
-                  <Phone className="w-5 h-5 xs:w-6 xs:h-6 text-gray-400 
+                  <Phone
+                    className="w-5 h-5 xs:w-6 xs:h-6 text-gray-400 
                                   group-hover:text-white transition-colors
-                                  hardware-acceleration" />
+                                  hardware-acceleration"
+                  />
                   <div>
-                    <p className="text-xs xs:text-sm text-gray-400 mb-1">Call Us</p>
+                    <p className="text-xs xs:text-sm text-gray-400 mb-1">
+                      Call Us
+                    </p>
                     <p className="text-base xs:text-lg font-semibold text-white">
-                      +91 99254 56519
+                      +91 99254 65919
                     </p>
                   </div>
                 </div>
@@ -320,17 +370,25 @@ const Footer = () => {
                          hardware-acceleration touch-scale hover:scale-105"
               >
                 <div className="flex items-center gap-3 xs:gap-4">
-                  <Mail className="w-5 h-5 xs:w-6 xs:h-6 text-gray-400 
+                  <Mail
+                    className="w-5 h-5 xs:w-6 xs:h-6 text-gray-400 
                                  group-hover:text-white transition-colors
-                                 hardware-acceleration" />
+                                 hardware-acceleration"
+                  />
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs xs:text-sm text-gray-400 mb-1">Email Us</p>
-                    <p className="text-sm xs:text-base font-semibold text-white 
-                                 break-words">
+                    <p className="text-xs xs:text-sm text-gray-400 mb-1">
+                      Email Us
+                    </p>
+                    <p
+                      className="text-sm xs:text-base font-semibold text-white 
+                                 break-words"
+                    >
                       darshorthoclinic@gmail.com
                     </p>
-                    <p className="text-xs xs:text-sm text-gray-400 mt-1 
-                                 break-words">
+                    <p
+                      className="text-xs xs:text-sm text-gray-400 mt-1 
+                                 break-words"
+                    >
                       drdhirajnayakortho@yahoo.com
                     </p>
                   </div>
@@ -351,7 +409,9 @@ const Footer = () => {
                 <div className="space-y-1.5 xs:space-y-2 text-sm xs:text-base text-gray-300">
                   <div className="flex justify-between gap-2">
                     <span>Monday - Saturday</span>
-                    <span className="text-white font-medium">9:30 AM - 8:00 PM</span>
+                    <span className="text-white font-medium">
+                      9:30 AM - 8:00 PM
+                    </span>
                   </div>
                   <div className="flex justify-between gap-2">
                     <span>Sunday</span>
@@ -360,11 +420,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            {/* Enhanced Social Media - Fully responsive */}
             <div>
-              <h4 className="text-lg xs:text-xl sm:text-2xl font-semibold font-manrope
-                           mb-4 xs:mb-5 sm:mb-6 text-white">
+              <h4
+                className="text-lg xs:text-xl sm:text-2xl font-semibold font-manrope
+                           mb-4 xs:mb-5 sm:mb-6 text-white"
+              >
                 Follow Us
               </h4>
               <div ref={socialRef} className="flex gap-3 xs:gap-4">
@@ -381,9 +441,11 @@ const Footer = () => {
                            hover:scale-110 hover:bg-pink-600/20
                            active:scale-95"
                 >
-                  <Instagram className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
+                  <Instagram
+                    className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
                                       text-gray-400 group-hover:text-pink-400 
-                                      transition-colors duration-300" />
+                                      transition-colors duration-300"
+                  />
                 </a>
                 <a
                   href="https://www.youtube.com/@DhirajNayak-nd3fb"
@@ -398,9 +460,11 @@ const Footer = () => {
                            hover:scale-110 hover:bg-red-600/20
                            active:scale-95"
                 >
-                  <Youtube className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
+                  <Youtube
+                    className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
                                     text-gray-400 group-hover:text-red-400 
-                                    transition-colors duration-300" />
+                                    transition-colors duration-300"
+                  />
                 </a>
                 <a
                   href="#"
@@ -413,22 +477,23 @@ const Footer = () => {
                            hover:scale-110 hover:bg-blue-700/20
                            active:scale-95"
                 >
-                  <Linkedin className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
+                  <Linkedin
+                    className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
                                      text-gray-400 group-hover:text-blue-300 
-                                     transition-colors duration-300" />
+                                     transition-colors duration-300"
+                  />
                 </a>
               </div>
             </div>
           </div>
-
-          {/* Enhanced Right Section - Responsive maps and locations */}
           <div className="lg:col-span-7">
             <div ref={mapRef} className="h-full">
-              {/* Enhanced Google Maps Embed - Responsive */}
-              <div className="h-64 xs:h-72 sm:h-80 md:h-96 lg:h-[45vh] xl:h-[50vh] 
+              <div
+                className="h-64 xs:h-72 sm:h-80 md:h-96 lg:h-[45vh] xl:h-[50vh] 
                             w-full rounded xs:rounded-lg overflow-hidden 
                             mb-6 xs:mb-7 sm:mb-8 border border-gray-800
-                            hardware-acceleration">
+                            hardware-acceleration"
+              >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5!2d73.19729!3d22.32108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE5JzE2LjAiTiA3M8KwMTEnNTAuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
                   width="100%"
@@ -440,11 +505,11 @@ const Footer = () => {
                   title="Darsh Dental Clinic Location"
                 ></iframe>
               </div>
-
-              {/* Enhanced Location Cards - Responsive */}
               <div className="space-y-3 xs:space-y-4 mb-6 xs:mb-7 sm:mb-8">
-                <h4 className="text-lg xs:text-xl sm:text-2xl font-semibold font-manrope text-white 
-                             mb-4 xs:mb-5 sm:mb-6">
+                <h4
+                  className="text-lg xs:text-xl sm:text-2xl font-semibold font-manrope text-white 
+                             mb-4 xs:mb-5 sm:mb-6"
+                >
                   Our Locations
                 </h4>
                 {locations.map((location, index) => (
@@ -462,17 +527,23 @@ const Footer = () => {
                              hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <div className="flex items-start gap-2 xs:gap-3">
-                      <MapPin className="w-4 h-4 xs:w-5 xs:h-5 
+                      <MapPin
+                        className="w-4 h-4 xs:w-5 xs:h-5 
                                        text-gray-400 group-hover:text-rose-400 
                                        transition-colors flex-shrink-0 mt-0.5
-                                       hardware-acceleration" />
+                                       hardware-acceleration"
+                      />
                       <div className="flex-1 min-w-0">
-                        <p className="font-semibold mb-1.5 xs:mb-2 text-white 
-                                     text-sm xs:text-base">
+                        <p
+                          className="font-semibold mb-1.5 xs:mb-2 text-white 
+                                     text-sm xs:text-base"
+                        >
                           {location.name}
                         </p>
-                        <p className="text-xs xs:text-sm text-gray-400 leading-relaxed 
-                                     mb-2 xs:mb-3">
+                        <p
+                          className="text-xs xs:text-sm text-gray-400 leading-relaxed 
+                                     mb-2 xs:mb-3"
+                        >
                           {location.address}
                         </p>
                         <div className="space-y-0.5 xs:space-y-1">
@@ -496,8 +567,6 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-
-              {/* Enhanced Get Directions Button - Fully responsive */}
               <a
                 href="https://maps.google.com/maps?q=Darsh+Dental+Clinic+Karelibaug+Vadodara"
                 target="_blank"
@@ -514,24 +583,31 @@ const Footer = () => {
                          hover:bg-gradient-to-r hover:from-rose-500/10 hover:to-purple-500/10
                          touch-scale hover:scale-105 active:scale-95"
               >
-                <MapPin className="w-4 h-4 xs:w-5 xs:h-5 
+                <MapPin
+                  className="w-4 h-4 xs:w-5 xs:h-5 
                                  text-gray-400 group-hover:text-rose-400 
                                  transition-colors duration-300
-                                 hardware-acceleration" />
+                                 hardware-acceleration"
+                />
                 <span className="text-sm xs:text-base">
-                  <span className="hidden xs:inline">Get Directions to Main Clinic</span>
+                  <span className="hidden xs:inline">
+                    Get Directions to Main Clinic
+                  </span>
                   <span className="xs:hidden">Get Directions</span>
                 </span>
               </a>
             </div>
           </div>
         </div>
-
-        {/* Enhanced Bottom Bar - Fully responsive */}
-        <div ref={bottomRef} className="border-t border-gray-800 
-                                      pt-6 xs:pt-7 sm:pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center 
-                         gap-3 xs:gap-4">
+        <div
+          ref={bottomRef}
+          className="border-t border-gray-800 
+                                      pt-6 xs:pt-7 sm:pt-8"
+        >
+          <div
+            className="flex flex-col sm:flex-row justify-between items-center 
+                         gap-3 xs:gap-4"
+          >
             <div className="text-center sm:text-left">
               <p className="text-gray-400 text-xs xs:text-sm">
                 © 2025 Darsh Dental Clinic. All rights reserved.
@@ -540,19 +616,30 @@ const Footer = () => {
                 Reg. No. A-2629 | Gujarat Dental Council
               </p>
             </div>
-            <div className="flex flex-wrap justify-center sm:justify-end 
+            <div
+              className="flex flex-wrap justify-center sm:justify-end 
                          gap-4 xs:gap-5 sm:gap-6 
-                         text-gray-400 text-xs xs:text-sm">
-              <a href="#" className="hover:text-white transition-colors 
-                                   touch-scale hardware-acceleration">
+                         text-gray-400 text-xs xs:text-sm"
+            >
+              <a
+                href="#"
+                className="hover:text-white transition-colors 
+                                   touch-scale hardware-acceleration"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-white transition-colors 
-                                   touch-scale hardware-acceleration">
+              <a
+                href="#"
+                className="hover:text-white transition-colors 
+                                   touch-scale hardware-acceleration"
+              >
                 Terms & Conditions
               </a>
-              <a href="#services" className="hover:text-white transition-colors 
-                                           touch-scale hardware-acceleration">
+              <a
+                href="#services"
+                className="hover:text-white transition-colors 
+                                           touch-scale hardware-acceleration"
+              >
                 Services
               </a>
             </div>
