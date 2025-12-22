@@ -22,7 +22,7 @@ const TimelineSection = () => {
 
   const timelineItems = [
     {
-      year: "15+ Years",
+      year: "20+ Years",
       title: "Experience & Expertise",
       description:
         "Over 15 years of perfecting smiles with state-of-the-art technology and compassionate care across Vadodara.",

@@ -199,7 +199,7 @@ const HeroSection = () => {
 
             {/* Description with TextReveal */}
             <TextReveal
-              text="Experience 15+ years of excellence with Dr. Dhiraj Nayak. Advanced treatments, painless procedures, and compassionate care across 3 convenient locations in Vadodara."
+              text="Experience 20+ years of excellence with Dr. Dhiraj Nayak. Advanced treatments, painless procedures, and compassionate care across 3 convenient locations in Vadodara."
               className="text-xl text-gray-600 leading-relaxed max-w-2xl"
               duration={1.0}
               staggerDelay={0.06}
@@ -286,7 +286,7 @@ const HeroSection = () => {
                 {/* Doctor Badge */}
                 <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg">
                   <p className="text-sm font-semibold text-gray-900">Dr. Dhiraj Nayak</p>
-                  <p className="text-xs text-gray-600">15+ Years Experience</p>
+                  <p className="text-xs text-gray-600">20+ Years Experience</p>
                 </div>
               </div>
             </motion.div>

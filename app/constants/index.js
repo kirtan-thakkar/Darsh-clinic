@@ -1,7 +1,7 @@
 // SEO and Business Constants for Darsh Dental Clinic
 export const siteMetadata = {
   title: "Darsh Dental Clinic - Best Dental Care in Vadodara | 3 Convenient Locations",
-  description: "Expert dental care at Darsh Dental Clinic with 15+ years experience. Digital dentistry, painless treatments, and comprehensive oral healthcare across 3 locations in Vadodara - Karelibaug, New VIP Road & Ajwa Road.",
+  description: "Expert dental care at Darsh Dental Clinic with 20+ years experience. Digital dentistry, painless treatments, and comprehensive oral healthcare across 3 locations in Vadodara - Karelibaug, New VIP Road & Ajwa Road.",
   keywords: [
     "Darsh Dental Clinic",
     "Dental Clinic Vadodara",
@@ -45,10 +45,10 @@ export const businessInfo = {
     vipRoad: "+91 99780 88390",
     ajwaRoad: "+91 99746 13749"
   },
-  email: "info@darshdentalclinic.com",
+  email: "darshorthoclinic@gmail.com",
   website: "https://darshdentalclinic.com",
   establishedYear: "2008",
-  experienceYears: "15+",
+  experienceYears: "20+",
   locations: [
     {
       id: "karelibaug",
@@ -85,9 +85,8 @@ export const businessInfo = {
   },
   socialMedia: {
     facebook: "https://facebook.com/darshdentalclinic",
-    instagram: "https://instagram.com/darshdentalclinic",
-    youtube: "https://youtube.com/@darshdentalclinic",
-    linkedin: "https://linkedin.com/company/darsh-dental-clinic"
+    instagram: "https://www.instagram.com/darsh_dental_hospital?igsh=MTB4MTU1bnZoaXZ5Mg==",
+    youtube: "https://www.youtube.com/@DhirajNayak-nd3fb",
   }
 };
 
@@ -187,7 +186,7 @@ export const dentalServices = [
 export const clinicStats = {
   patientsServed: "10,000+",
   successRate: "98.5%",
-  experienceYears: "15+",
+  experienceYears: "20+",
   locations: "3",
   procedures: "5,500+",
   patientRetention: "94%",
@@ -223,7 +222,7 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": "Dentist",
   "name": "Dr. Dhiraj Nayak - Darsh Dental Clinic",
-  "description": "Expert dental care by Dr. Dhiraj Nayak with 15+ years experience in Vadodara. Comprehensive oral healthcare across 3 convenient locations.",
+  "description": "Expert dental care by Dr. Dhiraj Nayak with 20+ years experience in Vadodara. Comprehensive oral healthcare across 3 convenient locations.",
   "url": "https://darshdentalclinic.com",
   "telephone": "+91 99254 56519",
   "email": "info@darshdentalclinic.com",

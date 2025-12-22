@@ -15,7 +15,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Best Dental Clinic in Vadodara - Darsh Dental Clinic | Dr. Dhiraj Nayak",
   description:
-    "Expert dental care by Dr. Dhiraj Nayak at Darsh Dental Clinic with 15+ years experience. Advanced dentistry, painless treatments & comprehensive oral healthcare across Karelibaug, VIP Road & Ajwa Road, Vadodara.",
+    "Expert dental care by Dr. Dhiraj Nayak at Darsh Dental Clinic with 20+ years experience. Advanced dentistry, painless treatments & comprehensive oral healthcare across Karelibaug, VIP Road & Ajwa Road, Vadodara.",
   keywords:
     "darsh dental clinic, dr dhiraj nayak, best dentist vadodara, dental care vadodara, karelibaug dentist, vip road dental clinic, ajwa road dentist",
   canonicalUrl: "https://darshdentalclinic.com",
@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: "Darsh Dental Clinic - Premier Dental Care by Dr. Dhiraj Nayak",
     description:
-      "15+ years of expert dental care by Dr. Dhiraj Nayak across 3 convenient locations in Vadodara. Advanced technology, painless treatments, emergency care available 24/7. Join 1000+ happy patients.",
+      "20+ years of expert dental care by Dr. Dhiraj Nayak across 3 convenient locations in Vadodara. Advanced technology, painless treatments, emergency care available 24/7. Join 2000+ happy patients.",
     url: "https://darshdentalclinic.com",
     type: "website",
     siteName: "Darsh Dental Clinic",
@@ -39,7 +39,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Darsh Dental Clinic - Expert Dental Care",
-    description: "Expert dental services by Dr. Dhiraj Nayak. 1000+ happy patients across Vadodara.",
+    description: "Expert dental services by Dr. Dhiraj Nayak. 2000+ happy patients across Vadodara.",
     images: ["/og-darsh-clinic-homepage.jpg"],
   },
 };
@@ -170,11 +170,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Unified Bento Grid Services Section */}
             <div className="relative bg-gray-50">
               <UnifiedDentalServices />
-              
-              {/* Wave Divider at bottom */}
               <div className="absolute bottom-0 left-0 w-full h-auto">
                 <Image
                   src="/wavesNegative.svg"

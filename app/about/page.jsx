@@ -257,27 +257,25 @@ const AboutPage = () => {
 
     return () => ctx.revert();
   }, []);
-
-  // Team members data with unique IDs
   const teamMembers = [
     {
-      id: "dr-dhiraj-nayak-001",
+      id: "dr-dhiraj-nayak",
       name: "Dr. Dhiraj Nayak",
       role: "Founder & Chief Dental Officer",
       specialization: "General & Cosmetic Dentistry",
-      experience: "15+ Years",
+      experience: "20+ Years",
       qualifications: "BDS, MDS",
       avatar: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200579/dheeraj_mw5zif.jpg",
       isFounder: true,
       expertise: ["General Dentistry", "Cosmetic Dentistry", "Root Canal", "Dental Implants"],
-      description: "Visionary leader with 15+ years of excellence in dental care, transforming smiles across Vadodara.",
+      description: "Visionary leader with 20+ years of excellence in dental care, transforming smiles across Vadodara.",
     },
     {
-      id: "dr-priti-bhat-002",
+      id: "dr-priti-bhat",
       name: "Dr. Priti Bhat",
       role: "Senior Dental Surgeon",
       specialization: "General & Advanced Dentistry",
-      experience: "12+ Years",
+      experience: "13+ Years",
       qualifications: "BDS, MDS",
       avatar: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763208416/image-1763044165858_bcntzu.png",
       isFounder: false,
@@ -285,7 +283,7 @@ const AboutPage = () => {
       description: "Dedicated senior dental surgeon with extensive experience in comprehensive oral health care and advanced dental procedures.",
     },
     {
-      id: "dr-janhvi-oza-003",
+      id: "dr-janhvi-oza",
       name: "Dr. Janhvi Oza",
       role: "Dental Surgeon",
       specialization: "General Dentistry",
@@ -297,11 +295,11 @@ const AboutPage = () => {
       description: "Compassionate dental surgeon committed to providing quality dental care with a focus on patient comfort and oral health excellence.",
     },
     {
-      id: "dr-hetal-patel-004",
+      id: "dr-hetal-patel",
       name: "Dr. Hetal Patel",
       role: "Dental Surgeon",
       specialization: "General Dentistry",
-      experience: "7+ Years",
+      experience: "3+ Years",
       qualifications: "BDS",
       avatar: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200586/hetal_gclnsu.png",
       isFounder: false,
@@ -309,11 +307,11 @@ const AboutPage = () => {
       description: "Skilled dental surgeon dedicated to maintaining optimal oral health through comprehensive care and patient education.",
     },
     {
-      id: "dr-namrata-awariya-005",
+      id: "dr-namrata-awariya",
       name: "Dr. Namrata Awariya",
-      role: "BDS Surgeon",
+      role: "Dental Surgeon",
       specialization: "General Dentistry",
-      experience: "6+ Years",
+      experience: "3+ Years",
       qualifications: "BDS",
       avatar: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200587/namrata_p0eofv.png",
       isFounder: false,
@@ -325,7 +323,7 @@ const AboutPage = () => {
   const clinicStats = [
     {
       icon: Users,
-      number: 1000,
+      number: 2000,
       label: "Happy Patients",
       suffix: "+",
       color: "blue",
@@ -352,30 +350,6 @@ const AboutPage = () => {
       color: "yellow",
     },
   ];
-
-  const coreValues = [
-    {
-      icon: Heart,
-      title: "Patient-Centered Care",
-      description: "Every treatment decision is made with the patient's comfort, health, and satisfaction as our top priority.",
-    },
-    {
-      icon: Shield,
-      title: "Clinical Excellence",
-      description: "We maintain the highest standards of clinical practice, using evidence-based treatments and advanced technology.",
-    },
-    {
-      icon: Users,
-      title: "Compassionate Team",
-      description: "Our experienced team treats every patient with empathy, respect, and personalized attention.",
-    },
-    {
-      icon: Target,
-      title: "Continuous Innovation",
-      description: "We stay at the forefront of dental technology and techniques to provide the best possible outcomes.",
-    },
-  ];
-
   return (
     <ReactLenis root>
       <div className="min-h-screen bg-white">
@@ -476,7 +450,7 @@ const AboutPage = () => {
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-purple-500 group-hover:text-purple-600 transition-colors" />
               <span className="text-xs font-medium text-gray-700 group-hover:text-purple-600 transition-colors">
-                1000+ Transformed Lives
+                2000+ Transformed Lives
               </span>
             </div>
           </div>
@@ -526,7 +500,7 @@ const AboutPage = () => {
                       <Award className="w-7 h-7 text-white group-hover/badge:scale-110 transition-transform duration-300" />
                     </div>
                     <div>
-                      <p className="text-lg font-bold text-gray-900 group-hover/badge:text-blue-600 transition-colors">15+ Years</p>
+                      <p className="text-lg font-bold text-gray-900 group-hover/badge:text-blue-600 transition-colors">20+ Years</p>
                       <p className="text-sm text-gray-600 group-hover/badge:text-gray-700 transition-colors font-medium">Excellence & Innovation</p>
                     </div>
                   </div>
@@ -844,7 +818,6 @@ const AboutPage = () => {
                       href={`/about/${teamMembers[0].id}`}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl hover:rounded-2xl transition-all duration-300 group font-semibold button-bounce hover:shadow-2xl transform hover:scale-105 relative overflow-hidden"
                     >
-                      {/* Background shimmer */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                       <span className="relative z-10">Learn More About Dr. Naik</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300 relative z-10" />

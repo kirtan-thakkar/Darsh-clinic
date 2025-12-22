@@ -255,7 +255,7 @@ export default function Services() {
           <div className="absolute bottom-32 right-8 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer" style={{ animationDelay: '3s' }}>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-green-500" />
-              <span className="text-xs font-medium text-gray-700">1000+ Patients</span>
+              <span className="text-xs font-medium text-gray-700">2000+ Patients</span>
             </div>
           </div>
         </div>
@@ -306,7 +306,7 @@ export default function Services() {
             transition={{ delay: 1, duration: 0.8 }}
             className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4"
           >
-            Advanced dental treatments with 15+ years of expertise across 3 convenient locations in Vadodara. 
+            Advanced dental treatments with 20+ years of expertise across 3 convenient locations in Vadodara. 
             From preventive care to complex surgical procedures, we provide comprehensive oral healthcare solutions.
           </motion.p>
 

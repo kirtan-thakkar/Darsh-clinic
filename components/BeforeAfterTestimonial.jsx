@@ -128,7 +128,7 @@ export default function BeforeAfterTestimonial() {
               Transform Your Smile with Dr. Dhiraj Nayak&apos;s Expertise
             </h3>
             <p className="text-lg text-gray-600 mb-2">
-              ✨ 15+ Years of Excellence in Dental Care
+              ✨ 20+ Years of Excellence in Dental Care
             </p>
             <p className="text-lg text-gray-600 mb-2">
               🏆 500+ Successful Transformations

@@ -182,7 +182,7 @@ const TrustSection = () => {
               ))}
             </div>
             <div className="text-left">
-              <p className="text-sm font-semibold text-slate-700">Join 1000+ happy patients</p>
+              <p className="text-sm font-semibold text-slate-700">Join 2000+ happy patients</p>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-sm">⭐</span>

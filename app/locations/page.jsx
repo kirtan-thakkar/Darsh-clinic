@@ -364,7 +364,7 @@ const LocationsPage = () => {
             <div className="flex items-center gap-2">
               <Award className="w-4 h-4 text-purple-500" />
               <span className="text-xs font-medium text-gray-700">
-                15+ Years
+                20+ Years
               </span>
             </div>
           </div>
@@ -376,7 +376,7 @@ const LocationsPage = () => {
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-green-500" />
               <span className="text-xs font-medium text-gray-700">
-                1000+ patients
+                2000+ patients
               </span>
             </div>
           </div>

@@ -51,7 +51,7 @@ Contains all your clinic information:
 ```jsx
 export const metadata = {
   title: "Dental Implants in Vadodara - Darsh Dental Clinic",
-  description: "Expert dental implant surgery in Vadodara. 15+ years experience, advanced technology, painless procedures. Book consultation today.",
+  description: "Expert dental implant surgery in Vadodara. 20+ years experience, advanced technology, painless procedures. Book consultation today.",
   keywords: "dental implants vadodara, tooth implant, implant surgery"
 };
 ```
