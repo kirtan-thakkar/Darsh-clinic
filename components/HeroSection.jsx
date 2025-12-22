@@ -14,12 +14,10 @@ const HeroSection = () => {
   // Function to check if clinic is currently open
   const checkClinicStatus = () => {
     const now = new Date();
-    const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const day = now.getDay(); 
     const hours = now.getHours();
     const minutes = now.getMinutes();
-    const currentTime = hours * 60 + minutes; // Convert to minutes for easier comparison
-
-    // Clinic hours: Monday-Saturday 9:30 AM - 1:00 PM & 4:30 PM - 8:00 PM
+    const currentTime = hours * 60 + minutes;
     const morningStart = 9 * 60 + 30; // 9:30 AM
     const morningEnd = 13 * 60; // 1:00 PM
     const eveningStart = 16 * 60 + 30; // 4:30 PM
@@ -275,7 +273,7 @@ const HeroSection = () => {
             >
               <div className="aspect-[3/4] max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl group">
                 <Image
-                  src="https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200687/amr-taha-uvnMQXF56kQ-unsplash_vvkhid.jpg"
+                  src="https://res.cloudinary.com/dhgifwjqs/image/upload/v1766406761/Dental_Photography_auaslz.jpg"
                   alt="Dr. Dhiraj Nayak - Professional Dental Care at Darsh Dental Clinic"
                   width={400}
                   height={500}
