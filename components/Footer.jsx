@@ -215,7 +215,7 @@ const Footer = () => {
       name: "Ajwa Road, Kamla Nagar",
       address: "First Floor, Saujanya Trilake, Opp. Kamlanagar Lake, Ajwa Road, VADODARA",
       phone: "+91 997 4613749",
-      emergencyPhone: "9099246833",
+      emergencyPhone: "9099246835",
       timings: "9:30am to 1:00pm - 4:00pm to 8:00pm",
       mapUrl: "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
     },
@@ -292,7 +292,7 @@ const Footer = () => {
             <div className="space-y-4 xs:space-y-5 sm:space-y-6">
               <a
                 ref={(el) => (contactCardsRef.current[0] = el)}
-                href="tel:+919925456519"
+                href="tel:+919925465919"
                 className="block p-4 xs:p-5 sm:p-6 border border-gray-800 
                          rounded xs:rounded-lg hover:border-gray-700 
                          transition-all duration-300 group

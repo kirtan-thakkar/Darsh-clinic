@@ -236,7 +236,7 @@ const LocationsPage = () => {
       address: "First Floor, Saujanya Trilake, Opp. Kamlanagar Lake, Ajwa Road",
       city: "VADODARA, Gujarat, INDIA",
       phone: "+91 997 4613749",
-      emergencyPhone: "9099246833",
+      emergencyPhone: "9099246835",
       timings: "9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",
       mapUrl: "https://maps.google.com/maps?q=Saujanya+Trilake+Ajwa+Road+Vadodara",
       isMain: false,
@@ -781,7 +781,7 @@ const LocationsPage = () => {
                 </a>
 
                 <a
-                  href="tel:+919925456519"
+                  href="tel:+919925465919"
                   className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors group"
                 >
                   <Phone className="w-6 h-6 text-gray-400 group-hover:text-gray-600 transition-colors" />

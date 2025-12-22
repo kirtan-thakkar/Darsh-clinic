@@ -19,7 +19,6 @@ import {
   Check
 } from "lucide-react";
 
-// Unified bento grid combining the best elements from both original components
 const unifiedBentoItems = [
   {
     id: "hero",
@@ -65,8 +64,8 @@ const unifiedBentoItems = [
     description: "Serving Vadodara with accessible dental care.",
     feature: "locations",
     locations: [
-      { name: "Karelibaug", phone: "+91 99254 56519" },
-      { name: "New VIP Road", phone: "+91 99780 88390" },
+      { name: "Karelibaug", phone: "+91 99254 65919" },
+      { name: "New VIP Road", phone: "+91 99780 83930" },
       { name: "Ajwa Road", phone: "+91 99746 13749" }
     ],
     hours: "Mon-Sat: 9:30 AM - 1:00 PM, 4:00 PM - 8:00 PM",

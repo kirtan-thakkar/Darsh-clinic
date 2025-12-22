@@ -57,13 +57,13 @@ export default function Home() {
       question:
         "Do you accept insurance and what payment methods are available?",
       answer:
-        "We accept various payment methods including cash, credit/debit cards, and UPI payments for your convenience. While we don&apos;t directly process insurance, we can provide detailed receipts and treatment documentation that you can submit to your insurance provider for reimbursement.",
+        "We accept various payment methods including cash, credit/debit cards, and UPI payments for your convenience.We can provide detailed receipts and treatment documentation that you can submit to your insurance provider for reimbursement.",
     },
     {
       id: "emergency-services",
       question: "Do you provide emergency dental services?",
       answer:
-        "Yes, we provide 24/7 emergency dental services for urgent situations like severe tooth pain, dental trauma, or broken teeth. Call us immediately at +91 99254 65919 for emergency situations. We understand dental emergencies can&apos;t wait and we&apos;re here to help anytime.",
+        "Yes, we provide emergency dental services for urgent situations like severe tooth pain, dental trauma, or broken teeth. Call us immediately at +91 99254 65919 for emergency situations.",
     },
     {
       id: "treatment-duration",
