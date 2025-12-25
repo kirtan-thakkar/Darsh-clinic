@@ -169,8 +169,6 @@ const AboutPage = () => {
           ease: "power3.out",
         }
       );
-
-      // Story section animation
       gsap.fromTo(
         storyRef.current,
         {
@@ -189,8 +187,6 @@ const AboutPage = () => {
           ease: "power2.out",
         }
       );
-
-      // Stats animation
       gsap.fromTo(
         statsRef.current,
         {
@@ -212,8 +208,6 @@ const AboutPage = () => {
           ease: "power3.out",
         }
       );
-
-      // Values animation
       gsap.fromTo(
         valuesRef.current,
         {
@@ -233,8 +227,6 @@ const AboutPage = () => {
           ease: "power2.out",
         }
       );
-
-      // Team section animation
       gsap.fromTo(
         teamRef.current,
         {
@@ -259,7 +251,7 @@ const AboutPage = () => {
   }, []);
   const teamMembers = [
     {
-      id: "dr-dhiraj-nayak",
+      id: "dr-dhiraj-nayak-001",
       name: "Dr. Dhiraj Nayak",
       role: "Founder & Chief Dental Officer",
       specialization: "General & Cosmetic Dentistry",
@@ -271,7 +263,7 @@ const AboutPage = () => {
       description: "Visionary leader with 20+ years of excellence in dental care, transforming smiles across Vadodara.",
     },
     {
-      id: "dr-priti-bhat",
+      id: "dr-priti-bhat-002",
       name: "Dr. Priti Bhat",
       role: "Senior Dental Surgeon",
       specialization: "General & Advanced Dentistry",
@@ -283,7 +275,7 @@ const AboutPage = () => {
       description: "Dedicated senior dental surgeon with extensive experience in comprehensive oral health care and advanced dental procedures.",
     },
     {
-      id: "dr-janhvi-oza",
+      id: "dr-janhvi-oza-003",
       name: "Dr. Janhvi Oza",
       role: "Dental Surgeon",
       specialization: "General Dentistry",
@@ -295,7 +287,7 @@ const AboutPage = () => {
       description: "Compassionate dental surgeon committed to providing quality dental care with a focus on patient comfort and oral health excellence.",
     },
     {
-      id: "dr-hetal-patel",
+      id: "dr-hetal-patel-004",
       name: "Dr. Hetal Patel",
       role: "Dental Surgeon",
       specialization: "General Dentistry",
@@ -307,7 +299,7 @@ const AboutPage = () => {
       description: "Skilled dental surgeon dedicated to maintaining optimal oral health through comprehensive care and patient education.",
     },
     {
-      id: "dr-namrata-awariya",
+      id: "dr-namrata-awariya-005",
       name: "Dr. Namrata Awariya",
       role: "Dental Surgeon",
       specialization: "General Dentistry",
@@ -323,7 +315,7 @@ const AboutPage = () => {
   const clinicStats = [
     {
       icon: Users,
-      number: 2000,
+      number: 100000,
       label: "Happy Patients",
       suffix: "+",
       color: "blue",

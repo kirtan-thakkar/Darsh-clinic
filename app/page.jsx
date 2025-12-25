@@ -193,8 +193,6 @@ export default function Home() {
                 />
               </div>
             </div>
-
-            {/* Before & After Testimonials Section */}
             <div className="relative bg-gray-50">
               <div className="absolute top-0 left-0 w-full h-auto transform -scale-y-100">
                 <Image
