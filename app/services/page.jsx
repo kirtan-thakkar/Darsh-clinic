@@ -201,18 +201,14 @@ export default function Services() {
     <ReactLenis root>
       <div className="min-h-screen bg-white">
       <Navigation />
-      
-      {/* Hero Section - Mobile First */}
       <section className="relative min-h-[80vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white px-4 py-16 sm:py-20 overflow-hidden">
-        {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Floating Orbs */}
           <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-xl animate-pulse"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-green-100/40 rounded-full blur-lg animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }}></div>
           <div className="absolute bottom-32 left-40 w-40 h-40 bg-purple-100/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute bottom-20 right-20 w-28 h-28 bg-pink-100/30 rounded-full blur-xl animate-bounce" style={{ animationDelay: '3s', animationDuration: '4s' }}></div>
-          
-          {/* Medical Geometric Shapes */}
+        
           <div className="absolute top-60 left-10 w-4 h-4 bg-blue-400/20 rotate-45 animate-spin" style={{ animationDuration: '8s' }}></div>
           <div className="absolute top-32 right-40 w-6 h-6 bg-green-400/20 rotate-12 animate-spin" style={{ animationDuration: '6s', animationDirection: 'reverse' }}></div>
           <div className="absolute bottom-40 right-60 w-8 h-8 bg-purple-400/20 rotate-45 animate-spin" style={{ animationDuration: '10s' }}></div>
@@ -255,7 +251,7 @@ export default function Services() {
           <div className="absolute bottom-32 right-8 bg-white/80 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float hover:scale-105 transition-transform pointer-events-auto cursor-pointer" style={{ animationDelay: '3s' }}>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-green-500" />
-              <span className="text-xs font-medium text-gray-700">2000+ Patients</span>
+              <span className="text-xs font-medium text-gray-700">100000+ Patients</span>
             </div>
           </div>
         </div>
@@ -309,8 +305,6 @@ export default function Services() {
             Advanced dental treatments with 20+ years of expertise across 3 convenient locations in Vadodara. 
             From preventive care to complex surgical procedures, we provide comprehensive oral healthcare solutions.
           </motion.p>
-
-          {/* Enhanced Interactive Stats */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -337,7 +331,7 @@ export default function Services() {
                 <Users className="w-6 h-6 sm:w-8 sm:h-8 text-green-500 mx-auto relative z-10 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-green-600 transition-colors">
-                <CountAnimation number={1000} suffix="+" />
+                <CountAnimation number={100000} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors font-medium">Patients Treated</p>
               <div className="w-full h-1 bg-gray-200 rounded-full mt-3 overflow-hidden">
@@ -442,8 +436,6 @@ export default function Services() {
               and personalized treatment plans for every patient.
             </motion.p>
           </div>
-
-          {/* Enhanced Services Cards - Responsive grid with performance optimization */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -464,7 +456,7 @@ export default function Services() {
                   <CardSpotlight className="h-full p-3 xs:p-4 sm:p-5 md:p-6 bg-white 
                                          hover:shadow-2xl transition-all duration-300
                                          hardware-acceleration">
-                    {/* Enhanced header section - fully responsive */}
+                    {/* header section*/}
                     <div className="flex items-start gap-2 xs:gap-3 sm:gap-4 mb-3 xs:mb-4 sm:mb-6">
                       <motion.div 
                         whileHover={{ scale: 1.1, rotate: 5 }}

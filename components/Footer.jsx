@@ -9,7 +9,7 @@ import {
   Clock,
   Instagram,
   Youtube,
-  Linkedin,
+  Facebook,
   Award,
   Shield,
   Users,
@@ -467,19 +467,21 @@ const Footer = () => {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/share/1GKBDx9fVj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 
                            border border-gray-800 hover:border-gray-700 
                            rounded xs:rounded-lg 
                            flex items-center justify-center 
                            transition-all duration-300 group
                            hardware-acceleration touch-scale
-                           hover:scale-110 hover:bg-blue-700/20
+                           hover:scale-110 hover:bg-blue-600/20
                            active:scale-95"
                 >
-                  <Linkedin
+                  <Facebook
                     className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 
-                                     text-gray-400 group-hover:text-blue-300 
+                                     text-gray-400 group-hover:text-blue-400 
                                      transition-colors duration-300"
                   />
                 </a>

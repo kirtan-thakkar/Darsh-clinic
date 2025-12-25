@@ -614,8 +614,6 @@ const AboutPage = () => {
                   </div>
                 </motion.div>
               </motion.div>
-
-              {/* Premium Vision Statement */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -639,10 +637,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Statistics Section */}
       <section className="relative py-20 bg-gray-50">
-        {/* Wave at top */}
         <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
           <svg 
             className="absolute bottom-0 w-full h-full"
@@ -701,8 +696,6 @@ const AboutPage = () => {
             })}
           </div>
         </div>
-
-        {/* Wave at bottom */}
         <div className="absolute bottom-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
           <svg 
             className="absolute bottom-0 w-full h-full"
@@ -716,12 +709,9 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Why We Stand Out Timeline Section */}
       <TimelineSection />
-
-      {/* Team Section - Premium Team Component */}
       <section className="relative py-20 bg-gray-50" ref={teamRef}>
-        {/* Wave at top */}
+        {/* Wave */}
         <div className="absolute top-0 left-0 w-full h-4 xs:h-6 sm:h-8 md:h-10 lg:h-12 overflow-hidden">
           <svg 
             className="absolute bottom-0 w-full h-full"

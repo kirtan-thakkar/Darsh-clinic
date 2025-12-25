@@ -1,7 +1,7 @@
 // SEO and Business Constants for Darsh Dental Clinic
 export const siteMetadata = {
   title: "Darsh Dental Clinic - Best Dental Care in Vadodara | 3 Convenient Locations",
-  description: "Expert dental care at Darsh Dental Clinic with 20+ years experience. Digital dentistry, painless treatments, and comprehensive oral healthcare across 3 locations in Vadodara - Karelibaug, New VIP Road & Ajwa Road.",
+  description: "Expert dental care at Darsh Dental Clinic with 20+ years experience serving 1 lakh+ patients. Digital dentistry, painless treatments, and comprehensive oral healthcare across 3 locations in Vadodara - Karelibaug, New VIP Road & Ajwa Road.",
   keywords: [
     "Darsh Dental Clinic",
     "Dental Clinic Vadodara",
@@ -40,7 +40,7 @@ export const businessInfo = {
   tagline: "Advanced Dental Care with a Personal Touch",
   slogan: "Your Smile, Our Priority - Excellence in Every Treatment by Dr. Dhiraj Nayak",
   phone: {
-    primary: "+91 99254 56519",
+    primary: "+91 99254 65919",
     karelibaug: "+91 99254 56519",
     vipRoad: "+91 99780 88390",
     ajwaRoad: "+91 99746 13749"
@@ -106,7 +106,7 @@ export const dentalServices = [
       "Root Canal Treatment"
     ],
     keywords: ["fractured teeth vadodara", "broken teeth repair", "dental implants", "root canal treatment"],
-    procedures: "1,200+",
+    procedures: "200+",
     successRate: "98%"
   },
   {
@@ -184,7 +184,7 @@ export const dentalServices = [
 ];
 
 export const clinicStats = {
-  patientsServed: "10,000+",
+  patientsServed: "1,00,000+",
   successRate: "98.5%",
   experienceYears: "20+",
   locations: "3",
@@ -222,7 +222,7 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": "Dentist",
   "name": "Dr. Dhiraj Nayak - Darsh Dental Clinic",
-  "description": "Expert dental care by Dr. Dhiraj Nayak with 20+ years experience in Vadodara. Comprehensive oral healthcare across 3 convenient locations.",
+  "description": "Expert dental care by Dr. Dhiraj Nayak with 20+ years experience serving 1 lakh+ patients in Vadodara. Comprehensive oral healthcare across 3 convenient locations.",
   "url": "https://darshdentalclinic.com",
   "telephone": "+91 99254 56519",
   "email": "info@darshdentalclinic.com",

@@ -44,7 +44,7 @@ const TimelineSection = () => {
       iconColor: "text-purple-600",
     },
     {
-      year: "2,000+",
+      year: "1,00,000+",
       title: "Happy Smiles",
       description:
         "Trusted by thousands of patients for exceptional dental care and life-changing smile transformations.",
@@ -285,8 +285,6 @@ const TimelineItem = ({ item, index, isLeft, isMobile, variants }) => {
                 {item.year}
               </motion.div>
             </div>
-
-            {/* Desktop Year Badge - Enhanced responsive */}
             <motion.div
               initial={{ opacity: 0, x: isLeft ? 20 : -20 }}
               animate={
@@ -328,8 +326,6 @@ const TimelineItem = ({ item, index, isLeft, isMobile, variants }) => {
             </motion.p>
           </motion.div>
         </div>
-
-        {/* Center Icon (Desktop Only) - Performance optimized */}
         <div
           className={`hidden md:flex ${isLeft ? "md:order-2" : "md:order-1"} 
                         justify-center items-center`}
@@ -348,7 +344,6 @@ const TimelineItem = ({ item, index, isLeft, isMobile, variants }) => {
             whileHover={{ scale: 1.15, rotate: 180 }}
             className="relative hardware-acceleration will-change-transform"
           >
-            {/* Optimized Outer Ring - Reduced animation complexity on mobile */}
             <motion.div
               animate={isMobile ? {} : { rotate: 360 }}
               transition={
@@ -364,8 +359,6 @@ const TimelineItem = ({ item, index, isLeft, isMobile, variants }) => {
                        rounded-full border-2 md:border-4 border-dashed border-gray-300
                        hardware-acceleration"
             />
-
-            {/* Icon Container - Enhanced responsive */}
             <div
               className={`relative z-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 
                            ${item.iconBg} rounded-full flex items-center justify-center 
@@ -375,8 +368,6 @@ const TimelineItem = ({ item, index, isLeft, isMobile, variants }) => {
                 className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 ${item.iconColor}`}
               />
             </div>
-
-            {/* Optimized Pulse Effect - Reduced on mobile */}
             {!isMobile && (
               <motion.div
                 animate={{

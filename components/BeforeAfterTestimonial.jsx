@@ -18,8 +18,8 @@ const testimonials = [
   {
     id: 1,
     name: "Patient 1",
-    beforeImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200734/before1_y32obn.png",
-    afterImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1763200732/after1_bwbcoe.png"
+    beforeImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1766652205/darsh232_vopigi.jpg",
+    afterImage: "https://res.cloudinary.com/dhgifwjqs/image/upload/v1766652190/before4_rnbwpc.jpg"
   },
   {
     id: 2,
@@ -120,8 +120,6 @@ export default function BeforeAfterTestimonial() {
             ))}
           </SliderBtnGroup>
         </ProgressSlider>
-
-        {/* Attention Seeking Lines */}
         <div className="text-center mt-16 space-y-6">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -131,7 +129,7 @@ export default function BeforeAfterTestimonial() {
               ✨ 20+ Years of Excellence in Dental Care
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              🏆 500+ Successful Transformations
+              🏆 100000+ Successful Transformations
             </p>
             <p className="text-lg text-gray-600 mb-8">
               😊 Your Perfect Smile is Just One Appointment Away

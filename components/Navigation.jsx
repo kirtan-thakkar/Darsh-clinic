@@ -174,7 +174,7 @@ const Navbar = () => {
           <div className="font-light">
             <p className="tracking-wider text-white/50">Phone</p>
             <p className="text-xl tracking-wider">
-              +91 99254 56519
+              +91 99254 65919
             </p>
           </div>
         </div>

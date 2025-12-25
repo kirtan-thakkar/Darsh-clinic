@@ -80,8 +80,8 @@ function MessageDisplay() {
         {/* Contact Info */}
         <div className="mt-8 text-sm text-gray-600 font-medium">
           Need dental care? Call us at{' '}
-          <a href="tel:+919876543210" className="text-black hover:text-gray-700 font-bold">
-            +91 98765 43210
+          <a href="tel:+919925465919" className="text-black hover:text-gray-700 font-bold">
+            +91 99254 65919
           </a>
         </div>
       </div>
