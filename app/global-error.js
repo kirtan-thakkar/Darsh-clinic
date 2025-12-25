@@ -66,10 +66,10 @@ export default function GlobalError({ error, reset }) {
                                 <Phone className="w-5 h-5" />
                                 <span>Call us at </span>
                                 <a 
-                                    href="tel:+919876543210" 
+                                    href="tel:+919925465919" 
                                     className="font-bold hover:text-gray-700 transition-colors"
                                 >
-                                    +91 98765 43210
+                                    +91 99254 65919
                                 </a>
                             </div>
                         </div>
