@@ -218,7 +218,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center space-x-2 bg-white/80 px-4 py-2 rounded-lg shadow-sm">
                 <Users className="w-5 h-5 text-blue-600" />
-                <span className="font-semibold text-gray-900">1000+</span>
+                <span className="font-semibold text-gray-900">100000+</span>
                 <span className="text-gray-600">Happy Patients</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/80 px-4 py-2 rounded-lg shadow-sm">

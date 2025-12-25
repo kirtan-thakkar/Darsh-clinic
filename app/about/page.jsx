@@ -442,7 +442,7 @@ const AboutPage = () => {
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-purple-500 group-hover:text-purple-600 transition-colors" />
               <span className="text-xs font-medium text-gray-700 group-hover:text-purple-600 transition-colors">
-                2000+ Transformed Lives
+                100000+ Transformed Lives
               </span>
             </div>
           </div>

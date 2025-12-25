@@ -468,7 +468,7 @@ const LocationsPage = () => {
                 <Users className="w-8 h-8 text-green-500 mx-auto relative z-10 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                <CountAnimation number={1000} suffix="+" />
+                <CountAnimation number={100000} suffix="+" />
               </div>
               <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors">
                 Patients
