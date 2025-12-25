@@ -618,6 +618,21 @@ const Footer = () => {
                 Reg. No. A-2629 | Gujarat Dental Council
               </p>
             </div>
+            
+            <div className="hidden sm:flex text-center">
+              <p className="text-gray-400 text-xs flex items-center gap-1">
+                Made with <span className="text-red-400">❤️</span> by{' '}
+                <a 
+                  href="https://www.instagram.com/kirtan.p.v.t/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors underline hover:no-underline"
+                >
+                  kirtan
+                </a>
+              </p>
+            </div>
+            
             <div
               className="flex flex-wrap justify-center sm:justify-end 
                          gap-4 xs:gap-5 sm:gap-6 
@@ -645,6 +660,20 @@ const Footer = () => {
                 Services
               </a>
             </div>
+          </div>
+          
+          <div className="sm:hidden flex justify-center mt-3">
+            <p className="text-gray-400 text-xs flex items-center gap-1">
+              Made with <span className="text-red-400">❤️</span> by{' '}
+              <a 
+                href="https://www.instagram.com/kirtan.p.v.t/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors underline hover:no-underline"
+              >
+                kirtan
+              </a>
+            </p>
           </div>
         </div>
       </div>

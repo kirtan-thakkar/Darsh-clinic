@@ -12,7 +12,6 @@ import {
   SliderBtn 
 } from './progressive-carousel';
 import TextReveal from "@/components/forgeui/text-reveal";
-import { Highlighter } from './ui/Highlighter';
 
 const testimonials = [
   {
